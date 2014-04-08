@@ -1,0 +1,23 @@
+<?php
+
+class Model_MediaType extends Orm\Model{
+	protected static $_properties = array (
+		'id',
+		'kind_id',
+		'kind',
+		'created_at',
+		'updated_at'
+
+	);
+
+	// protected static $_observers = array(
+	// 	'Orm\Observer_created_at' => array(
+	// 		'events'=> array('before_insert'),
+	// 		'mysql_timestamp' => true,
+	// 	),
+	// 	'Orm\Observer_updated_at' => array(
+	// 		'events' => array('before_save'),
+	// 		'mysql_timestamp' => true;
+	// 	)
+	// )
+}
