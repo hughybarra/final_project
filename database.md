@@ -84,16 +84,16 @@ PRIMARY KEY (p_id)
 
 CREATE TABLE page_data
 (
-id int NOT NULL,
+id int AUTO_INCREMENT NOT NULL,
 rest_id int NOT NULL,
 
 page_type VARCHAR(255) NOT NULL,
-file_path VARCHAR(255) NOT NULL,
+page_data TEXT NOT NULL,
 
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,
 
-PRIMARY KEY (p_id)
+PRIMARY KEY (id)
 )
 
 

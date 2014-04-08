@@ -1,16 +1,15 @@
 <?php
 
-class Model_Location extends Orm\Model{
+class Model_Media extends Orm\Model{
 
 	protected static $_table_name = 'location';
 
 	protected static $_properties = array (
 		'id',
 		'rest_id',
-		'street',
-		'city',
-		'state',
-		'zip',
+		'media_type',
+		'path',
+
 		'created_at',
 		'updated_at'
 	);

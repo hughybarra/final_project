@@ -5,18 +5,18 @@ class Model_Restaurants extends Orm\Model{
 		'id',
 		'name',
 		'active',
-		'created_at',
-		'updated_at'
+		// 'created_at',
+		// 'updated_at'
 	);
 
-	// protected static $_observers = array(
-	// 	'Orm\Observer_created_at' => array(
-	// 		'events'=> array('before_insert'),
-	// 		'mysql_timestamp' => true,
-	// 	),
-	// 	'Orm\Observer_updated_at' => array(
-	// 		'events' => array('before_save'),
-	// 		'mysql_timestamp' => true;
-	// 	)
-	// )
+	protected static $_observers = array(
+		'Orm\Observer_created_at' => array(
+			'events'=> array('before_insert'),
+			'mysql_timestamp' => true,
+		),
+		'Orm\Observer_updated_at' => array(
+			'events' => array('before_save'),
+			'mysql_timestamp' => true,
+		),
+	);
 }

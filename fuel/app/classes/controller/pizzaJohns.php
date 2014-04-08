@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * Fuel is a fast, lightweight, community driven PHP5 framework.
+ *
+ * @package    Fuel
+ * @version    1.7
+ * @author     Hugh Ybarra
+ * @license    MIT License
+ */
+
+
 class Controller_PizzaJohns extends Controller {
 
 	/*
@@ -9,7 +19,7 @@ class Controller_PizzaJohns extends Controller {
 	public function action_index(){
 
 
-		// Variabls
+		// public Variabls
 		//===========================
 		$active 	= '';
 		$rest_id 	= 1;
@@ -17,36 +27,47 @@ class Controller_PizzaJohns extends Controller {
 		$title 		= '';
 		$logo 		= '';
 
-		$location 	= array();
+		//location
+		$location = array();
+		$street 	= '';
+		$city 		= '';
+		$state 		= '';
+		$zip 		= '';
 
-		$media 			= array();
-		$media_type 	= array();
-		$menu 			= array();
-		$menu_type 		= array();
-		$page_data 		= array();
-		$page_type 		= array();
-		$social_media 	= array();
+		//menu
+
+		//media
+
+		//markdown
+
+		//social Media
+
+
 
 		// end variables
 		//===========================
 
-		// grab restaurant from db
+		// grab restaurant DATA from db
 		//===========================
 
 
 		// Restaurant Model
 		// grab restaurant data from database
+		// if active is true pull in data
 		$m_rest = Model_Restaurants::find($rest_id);
 
-
 		//Location Model
-		// grab all addresses from the database
-		// $m_location = Model_Location::find('all', array('conditions' => 'rest_id ='.$rest_id));
+		// grab location fro database
 		$m_location = Model_Location::find($rest_id);
 
-		foreach ($m_location as $value){
-			echo $value;
-		}
+
+		$location['street'] 	= $m_location['street'];
+		$location['city'] 		= $m_location['city'];
+		$location['state'] 		= $m_location['state'];
+		$location['zip'] 		= $m_location['state'];
+
+
+
 
 
 
