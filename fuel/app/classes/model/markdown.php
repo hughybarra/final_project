@@ -1,11 +1,11 @@
 <?php
 
-class Model_PageData extends Orm\Model{
+class Model_Markdown extends Orm\Model{
 	protected static $_properties = array (
 		'id',
 		'rest_id',
 		'page_type',
-		'file_path',
+		'page_data',
 		'created_at',
 		'updated_at'
 	);

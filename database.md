@@ -82,13 +82,13 @@ PRIMARY KEY (p_id)
 
 ## pages
 
-CREATE TABLE page_data
+CREATE TABLE markdowns
 (
 id int AUTO_INCREMENT NOT NULL,
-rest_id int NOT NULL,
+restaurant_id int NOT NULL,
 
-page_type VARCHAR(255) NOT NULL,
-page_data TEXT NOT NULL,
+type VARCHAR(255) NOT NULL,
+data TEXT NOT NULL,
 
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,
@@ -133,6 +133,7 @@ PRIMARY KEY (p_id)
 
 CREATE TABLE menu_type
 (
+id INT NOT NULL
 menu_type VARCHAR(255) NOT NULL,
 kind VARCHAR(255) NOT NULL,
 

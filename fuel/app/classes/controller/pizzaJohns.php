@@ -18,32 +18,6 @@ class Controller_PizzaJohns extends Controller {
 
 	public function action_index(){
 
-
-		// public Variabls
-		//===========================
-		$active 	= '';
-		$rest_id 	= 1;
-		$name 		= '';
-		$title 		= '';
-		$logo 		= '';
-
-		//location
-		$location = array();
-		$street 	= '';
-		$city 		= '';
-		$state 		= '';
-		$zip 		= '';
-
-		//menu
-
-		//media
-
-		//markdown
-
-		//social Media
-
-
-
 		// end variables
 		//===========================
 
@@ -52,19 +26,33 @@ class Controller_PizzaJohns extends Controller {
 
 
 		// Restaurant Model
+
 		// grab restaurant data from database
 		// if active is true pull in data
-		$m_rest = Model_Restaurants::find($rest_id);
-
+		// $restaurant = Model_Restaurants::find($rest_id);
+		//===========================
 		//Location Model
+
 		// grab location fro database
-		$m_location = Model_Location::find($rest_id);
+		// $location = Model_Location::find($rest_id);
+		//parse locationdata into array
+
+		//===========================
+
+		// markdown model
+		// $m_markdown = Model_Markdown::find_all_by_rest_id($rest_id);
 
 
-		$location['street'] 	= $m_location['street'];
-		$location['city'] 		= $m_location['city'];
-		$location['state'] 		= $m_location['state'];
-		$location['zip'] 		= $m_location['state'];
+		// foreach($m_markdown as $key){
+		// 	array_push($markdown_data, $key['page_data']);
+		// }
+
+		// var_dump($markdown_data);
+
+		$test = new Model_Restaurant();
+
+		$test->get_document('pizzaJohns');
+
 
 
 

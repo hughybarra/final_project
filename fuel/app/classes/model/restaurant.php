@@ -1,12 +1,13 @@
 <?php
 
-class Model_Restaurants extends Orm\Model{
+class Model_Restaurant extends Orm\Model{
+
 	protected static $_properties = array (
 		'id',
 		'name',
 		'active',
 		// 'created_at',
-		// 'updated_at'
+		// 'updated_at',
 	);
 
 	protected static $_observers = array(
@@ -19,4 +20,9 @@ class Model_Restaurants extends Orm\Model{
 			'mysql_timestamp' => true,
 		),
 	);
+
+	public function get_document($name)
+	{
+		return Model_Resturant_Document::get_by_name($this, $name);
+	}
 }
