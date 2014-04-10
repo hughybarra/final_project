@@ -2,12 +2,15 @@
 
 class Model_Restaurant extends Orm\Model{
 
+	protected static $_table_name = 'location';
+
 	protected static $_properties = array (
 		'id',
 		'name',
 		'active',
+
 		// 'created_at',
-		// 'updated_at',
+		// 'updated_at'
 	);
 
 	protected static $_observers = array(
@@ -17,12 +20,7 @@ class Model_Restaurant extends Orm\Model{
 		),
 		'Orm\Observer_updated_at' => array(
 			'events' => array('before_save'),
-			'mysql_timestamp' => true,
-		),
-	);
-
-	public function get_document($name)
-	{
-		return Model_Resturant_Document::get_by_name($this, $name);
-	}
+			'mysql_timestamp' => true;
+		)
+	)
 }

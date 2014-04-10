@@ -16,15 +16,15 @@ created_at DATETIME NOT NULL,
 
 updated_at DATETIME,
 
-PRIMARY KEY (p_id)
+PRIMARY KEY (id)
 )
 
 ## location
 
-CREATE TABLE location
+CREATE TABLE locations
 (
 id int AUTO_INCREMENT NOT NULL,
-rest_id int NOT NULL,
+restaurant_id int NOT NULL,
 
 street VARCHAR(255) NOT NULL,
 city VARCHAR(255) NOT NULL,
@@ -34,26 +34,15 @@ zip int NOT NULL,
 created_at DATETIME NOT NULL,
 updated_at DATETIME,
 
-PRIMARY KEY (p_id)
+PRIMARY KEY (id)
 )
-
-
-## state
-
-CREATE TABLE state
-(
-id int NOT NULL,
-state VARCHAR(255) NOT NULL,
-PRIMARY KEY (p_id)
-)
-
 
 ## media
 
-CREATE TABLE media
+CREATE TABLE medias
 (
 id int NOT NULL,
-rest_id int NOT NULL,
+restaurant_id int NOT NULL,
 
 media_type int NOT NULL,
 path VARCHAR(255) NOT NULL,
@@ -61,26 +50,11 @@ path VARCHAR(255) NOT NULL,
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,
 
-PRIMARY KEY (p_id)
+PRIMARY KEY (id)
 )
 
 
-## Media Type
-
-CREATE TABLE mediaType
-(
-id int NOT NULL,
-kind_id int NOT NULL,
-kind VARCHAR(255),
-
-created_at DATETIME NOT NULL,
-updated_at DATETIME NOT NULL,
-
-PRIMARY KEY (p_id)
-)
-
-
-## pages
+## markdown
 
 CREATE TABLE markdowns
 (
@@ -96,22 +70,6 @@ updated_at DATETIME NOT NULL,
 PRIMARY KEY (id)
 )
 
-
-
-## Page Type
-
-CREATE TABLE page_type
-(
-id int NOT NULL,
-kind VARCHAR(255) NOT NULL,
-
-created_at DATETIME NOT NULL,
-updated_at DATETIME NOT NULL,
-
-PRIMARY KEY (p_id)
-)
-
-
 ## MENUS
 
 CREATE TABLE menu
@@ -124,31 +82,15 @@ file_path VARCHAR(255) NOT NULL,
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,
 
-PRIMARY KEY (p_id)
+PRIMARY KEY (id)
 )
-
-
-
-## MENU TYPE
-
-CREATE TABLE menu_type
-(
-id INT NOT NULL
-menu_type VARCHAR(255) NOT NULL,
-kind VARCHAR(255) NOT NULL,
-
-created_at DATETIME NOT NULL,
-updated_at DATETIME NOT NULL
-)
-
-
 
 ## Social Media
 
 CREATE TABLE social_media
 (
 id int NOT NULL,
-rest_id int NOT NULL,
+restaurant_id int NOT NULL,
 
 media_type int NOT NULL,
 media_link VARCHAR(255) NOT NULL,

@@ -10,7 +10,7 @@
  */
 
 
-class Controller_PizzaJohns extends Controller {
+class Controller_PizzaJohns extends Controller_Template {
 
 	/*
 		Pizza Johns main controller
@@ -49,9 +49,15 @@ class Controller_PizzaJohns extends Controller {
 
 		// var_dump($markdown_data);
 
-		$test = new Model_Restaurant();
+		// $test = new Model_Restaurant();
 
-		$test->get_document('pizzaJohns');
+		// $test->get_document('pizzaJohns');
+
+
+
+		ViewModel::forge('pizzaJohns/index');
+
+
 
 
 
