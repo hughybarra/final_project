@@ -5,34 +5,22 @@ class Model_Restaurant extends Orm\Model{
 	protected static $_properties = array (
 		'id',
 		'name',
+		'url',
 		'active',
-
 		'created_at',
 		'updated_at'
 	);
 
-	// protected static $_observers = array(
-	// 	'Orm\Observer_created_at' => array(
-	// 		'events'=> array('before_insert'),
-	// 		'mysql_timestamp' => true,
-	// 	),
-	// 	'Orm\Observer_updated_at' => array(
-	// 		'events' => array('before_save'),
-	// 		'mysql_timestamp' => true,
-	// 	),
-	// );
-
-	/*
-		public function get id
-		pass name of restaurant and search restaurants db for one result
-	*/
-	public function get_id($name)
-	{
-
-		$test = new Model_Test();
-		$restaurantData = $test->get_restaurant_by_name( $this , $name);
-		return $restaurantData;
-	}
+	protected static $_observers = array(
+		'Orm\Observer_created_at' => array(
+			'events'=> array('before_insert'),
+			'mysql_timestamp' => true,
+		),
+		'Orm\Observer_updated_at' => array(
+			'events' => array('before_save'),
+			'mysql_timestamp' => true,
+		),
+	);
 
 	/*
 		public function get location
@@ -47,5 +35,13 @@ class Model_Restaurant extends Orm\Model{
 	public function get_document()
 	{
 		echo 'get document';
+	}
+
+	/**
+	 *
+	 */
+	public static function get_by_url($url)
+	{
+		return static::query()->where('url', $url)->get_one();
 	}
 }

@@ -6,5 +6,7 @@ return array(
 	//Restaurant Routing List
 	//--------------------------------
 	// add regex for caps
-	'pizzajohns' => 'pizzaJohns/index',
+
+	':url/(:any)' => 'restaurant/$2',
+	':url'        => 'restaurant/view',
 );

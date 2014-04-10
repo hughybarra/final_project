@@ -9,6 +9,8 @@
 
 		<span>template is running</span>
 		<hr>
+
+		<?= isset($body) ? $body : null ?>
 	</body>
 
 

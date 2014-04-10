@@ -10,6 +10,8 @@ id int AUTO_INCREMENT  NOT NULL,
 
 name VARCHAR(255) NOT NULL,
 
+url VARCHAR(255) NOT NULL,
+
 active int,
 
 created_at DATETIME NOT NULL,

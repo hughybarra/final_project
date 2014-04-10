@@ -10,7 +10,8 @@
  */
 
 
-class Controller_PizzaJohns extends Controller_Template {
+class Controller_PizzaJohns extends Controller_Template
+{
 
 	/*
 		Pizza Johns main controller
@@ -29,7 +30,7 @@ class Controller_PizzaJohns extends Controller_Template {
 		$restaurant = $m_restaurant->get_id($name);
 
 		// gret the restaurant id
-		echo $restaurant['id'];
+
 
 
 
