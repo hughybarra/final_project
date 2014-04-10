@@ -18,53 +18,22 @@ class Controller_PizzaJohns extends Controller_Template {
 
 	public function action_index(){
 
-		// end variables
-		//===========================
 
-		// grab restaurant DATA from db
-		//===========================
+		$m_restaurant = new Model_Restaurant();
 
+		// grab the name from the url
+		$name =  Uri::segment(1);
+		// lowercase the name
+		$name = strtolower($name);
+		// search for it in the DB
+		$restaurant = $m_restaurant->get_id($name);
 
-		// Restaurant Model
-
-		// grab restaurant data from database
-		// if active is true pull in data
-		// $restaurant = Model_Restaurants::find($rest_id);
-		//===========================
-		//Location Model
-
-		// grab location fro database
-		// $location = Model_Location::find($rest_id);
-		//parse locationdata into array
-
-		//===========================
-
-		// markdown model
-		// $m_markdown = Model_Markdown::find_all_by_rest_id($rest_id);
-
-
-		// foreach($m_markdown as $key){
-		// 	array_push($markdown_data, $key['page_data']);
-		// }
-
-		// var_dump($markdown_data);
-
-		// $test = new Model_Restaurant();
-
-		// $test->get_document('pizzaJohns');
-
-
-
-		ViewModel::forge('pizzaJohns/index');
+		// gret the restaurant id
+		echo $restaurant['id'];
 
 
 
 
 
-
-
-
-
-		// return Response::forge(View::forge('restaurants/pizzajohns/index'));
 	}
 }

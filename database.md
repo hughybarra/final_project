@@ -72,12 +72,12 @@ PRIMARY KEY (id)
 
 ## MENUS
 
-CREATE TABLE menu
+CREATE TABLE menus
 (
 id int NOT NULL,
 
-menu_type VARCHAR(255) NOT NULL,
-file_path VARCHAR(255) NOT NULL,
+type VARCHAR(255) NOT NULL,
+data TEXT NOT NULL,
 
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,
@@ -93,12 +93,12 @@ id int NOT NULL,
 restaurant_id int NOT NULL,
 
 media_type int NOT NULL,
-media_link VARCHAR(255) NOT NULL,
+media_link TEXT NOT NULL,
 
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,
 
-PRIMARY KEY (p_id)
+PRIMARY KEY (id)
 )
 
 
