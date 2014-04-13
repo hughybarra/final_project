@@ -56,7 +56,7 @@ class Controller_Restaurant extends Controller_Template
 
 	public function get_menuType()
 	{
-		echo Uri::segment(3);
+
 		$this->template->body = View::forge('restaurant/menuType', []);
 
 	}
