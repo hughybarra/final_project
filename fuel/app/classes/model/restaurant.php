@@ -22,26 +22,35 @@ class Model_Restaurant extends Orm\Model{
 		),
 	);
 
-	/*
-		public function get location
-		pass restaurant id and search for locations db for one result
-	*/
-	public function get_location($id)
-	{
-
-	}
-
-
-	public function get_document()
-	{
-		echo 'get document';
-	}
 
 	/**
-	 *
+	 * get_location() function. Returns a location Object
+	 */
+	public function get_location()
+	{
+		$this->location = Model_Location::get_location_by_restaurant($this);
+		return $this;
+	}// end get_location function
+	//======================================
+
+	/**
+	 * get_markdown() function. Returns the specified markdown if it exists
+	 */
+	public function get_markdown($type)
+	{
+		$this->markdown = Model_Markdown::get_markdown_by_restaurant($this, $type);
+		return $this;
+	}// end get_markdowns() function
+	//======================================
+
+	/**
+	 * get_by_url() funciton. Grabs the id of a restaurant based off url
 	 */
 	public static function get_by_url($url)
 	{
 		return static::query()->where('url', $url)->get_one();
-	}
+	}// end get_by_url function
+	//======================================
+
+
 }

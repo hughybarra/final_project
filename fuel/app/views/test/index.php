@@ -1,1 +1,0 @@
-<span>test/index.php is running</span>

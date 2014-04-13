@@ -21,4 +21,12 @@ class Model_Markdown extends Orm\Model
 	            'mysql_timestamp' => false,
 	    ),
     );
+
+
+    public static function get_markdown_by_restaurant($restaurant, $type)
+	{
+		return static::query()->where('restaurant_id', $restaurant->id)->
+								where('type', $type)->
+								get_one();
+	}
 }
