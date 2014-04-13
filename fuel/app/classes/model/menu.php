@@ -20,12 +20,25 @@ class Model_Menu extends Orm\Model
 	            'mysql_timestamp' => false,
 	    ),
     );
+    /*
+	 *
+	 */
+	public static function get_menu_types_by_restaurant($restaurant)
+	{
+		//return all menus by restaurant
+		return static::query()->select('type')->where('restaurant_id', $restaurant->id)->get();
+	}
 
     /*
      * public
      */
-    public static function get_menu_by_restaurant($restaurant)
+    public static function get_menu_by_restaurant($restaurant, $type)
 	{
-		return static::query()->where('restaurant_id', $restaurant->id)->get_one();
+		// return static::query()->where('restaurant_id', $restaurant->id)->get_one();
+		return static::query()->where('restaurant_id', $restaurant->id)->
+						where('type', $type)->
+						get_one();
 	}
+
+
 }

@@ -8,11 +8,12 @@
 
 */
 html {
-	width: 100%;
+	/*width: 1200px;*/
 }
 
 body{
-background-color: green;
+/*background-color: green;*/
+/*width: 1200px;*/
 }
 
 
@@ -29,7 +30,7 @@ background-color: green;
 	z-index: 2;
 	width: 150px;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 
 	background: rgba(31,29,25,1);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(31,29,25,1) 0%, rgba(57,55,49,0.75) 100%);
@@ -65,9 +66,10 @@ background-color: green;
 */
 
 .restaurant-logo {
-	width: 200px;
-	display: block;
-	margin: 0 auto;
+	/*width: 200px;*/
+	/*display: block;*/
+	/*margin: 0 auto;*/
+	background-color: red;
 }
 
 /*
@@ -100,9 +102,35 @@ background-color: green;
 
 
 
+/*
+ █████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
+██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
+███████║██████╔╝██║   ██║██║   ██║   ██║
+██╔══██║██╔══██╗██║   ██║██║   ██║   ██║
+██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║
+╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝
 
+*/
+.logo {
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+.about {
+	/*background-color: blue;*/
+}
+.about img {
+	margin-bottom: 50px;
+	max-width: 100%;
+	height: auto;
 
+}
+.about-container p {
+/*	width: 800px;
+	margin: 0 auto;
+	line-height: 25px;*/
 
+}
 
 
 

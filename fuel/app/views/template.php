@@ -26,23 +26,25 @@
 				</ul>
 		</nav> -->
 		<!-- end navigation -->
+		<div class="container">
 
-		<!-- logo -->
-		<?= Html::img('assets/media/images/pizzajohns_logo.png', array("alt" => "Restaurant Logo", 'class' => "restaurant-logo")) ?>
 
-		<!-- end logo -->
-		<?= isset($body) ? $body : null ?>
 
-		<footer>
-		</footer>
+			<!-- end logo -->
+			<?= isset($body) ? $body : null ?>
 
-		<!-- Javascript -->
-		<!-- Jquery -->
-		<?= Asset::js('jquery-1.11.0.min.js', array(), null, true) ?>
-		<!-- jquery video -->
-		<link href="//vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
-		<!-- main.js -->
-		<?= Asset::js('main.js', array(), null, true) ?>
+			<footer>
+			</footer>
+
+			<!-- Javascript -->
+			<!-- Jquery -->
+			<?= Asset::js('jquery-1.11.0.min.js', array(), null, true) ?>
+			<!-- jquery video -->
+			<link href="//vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
+			<!-- main.js -->
+			<?= Asset::js('main.js', array(), null, true) ?>
+		</div>
+		<!-- end container div -->
 
 </body>
 </html>

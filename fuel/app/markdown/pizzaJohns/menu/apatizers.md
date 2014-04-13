@@ -1,3 +1,0 @@
-## Apatizers
-
-menu item | price

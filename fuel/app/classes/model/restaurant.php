@@ -22,13 +22,21 @@ class Model_Restaurant extends Orm\Model{
 		),
 	);
 
+	/**
+	 *
+	 */
+	public function get_menu_types()
+	{
+		$this->menuTypes = Model_Menu::get_menu_types_by_restaurant($this);
+		return $this;
+	}
 
 	/**
 	 *
 	 */
-	public function get_menus()
+	public function get_menu($type)
 	{
-		$this->menu = Model_Menu::get_menu_by_restaurant($this);
+		$this->menu = Model_Menu::get_menu_by_restaurant($this, $type);
 		return $this;
 	}
 	/**
