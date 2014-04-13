@@ -18,21 +18,13 @@
 	?>
 	<body>
 
-<!-- 		<video id="example_video_1" class="video-js vjs-default-skin"
-			controls preload="auto" width="1400" height="1000"
-			poster="http://video-js.zencoder.com/oceans-clip.png"
-			data-setup='{"example_option":true}'>
-			<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
-			<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-			<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
-		</video> -->
-		<nav class="side-navigation">
+<!-- 		<nav class="side-navigation">
 				<ul>
 					<li>About</li>
 					<li>Menu</li>
 					<li>Location</li>
 				</ul>
-		</nav>
+		</nav> -->
 		<!-- end navigation -->
 
 		<!-- logo -->
@@ -51,9 +43,6 @@
 		<link href="//vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
 		<!-- main.js -->
 		<?= Asset::js('main.js', array(), null, true) ?>
-
-
-
 
 </body>
 </html>

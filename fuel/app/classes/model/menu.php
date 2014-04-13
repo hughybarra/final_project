@@ -20,4 +20,12 @@ class Model_Menu extends Orm\Model
 	            'mysql_timestamp' => false,
 	    ),
     );
+
+    /*
+     * public
+     */
+    public static function get_menu_by_restaurant($restaurant)
+	{
+		return static::query()->where('restaurant_id', $restaurant->id)->get_one();
+	}
 }

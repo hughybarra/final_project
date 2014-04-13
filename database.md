@@ -76,7 +76,8 @@ PRIMARY KEY (id)
 
 CREATE TABLE menus
 (
-id int NOT NULL,
+id int AUTO_INCREMENT NOT NULL,
+restaurant_id int NOT NULL,
 
 type VARCHAR(255) NOT NULL,
 data TEXT NOT NULL,

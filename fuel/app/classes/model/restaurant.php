@@ -24,6 +24,14 @@ class Model_Restaurant extends Orm\Model{
 
 
 	/**
+	 *
+	 */
+	public function get_menus()
+	{
+		$this->menu = Model_Menu::get_menu_by_restaurant($this);
+		return $this;
+	}
+	/**
 	 * get_location() function. Returns a location Object
 	 */
 	public function get_location()
