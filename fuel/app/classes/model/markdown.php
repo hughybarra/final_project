@@ -23,10 +23,12 @@ class Model_Markdown extends Orm\Model
     );
 
 
-    public static function get_markdown_by_restaurant($restaurant, $type)
+    public static function get_markdown_by_restaurant(Model_Restaurant $restaurant, $type)
 	{
-		return static::query()->where('restaurant_id', $restaurant->id)->
-								where('type', $type)->
-								get_one();
+
+		return static::query()
+			->where('restaurant_id', $restaurant->id)
+			->where('type', $type)
+			->get_one();
 	}
 }

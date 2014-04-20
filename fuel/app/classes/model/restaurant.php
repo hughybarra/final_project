@@ -11,6 +11,18 @@ class Model_Restaurant extends Orm\Model{
 		'updated_at'
 	);
 
+	// protected static $_has_many = array('menus');
+
+	// protected static $_has_many = array(
+	// 	'menus' => array(
+	// 		'key_from'       => 'id',
+	// 		'model_to'       => 'Model_Menu',
+	// 		'key_to'         => 'restaurant_id',
+	// 		'cascade_save'   => true,
+	// 		'cascade_delete' => false,
+	// 	)
+	// );
+
 	protected static $_observers = array(
 		'Orm\Observer_created_at' => array(
 			'events'=> array('before_insert'),
@@ -25,10 +37,10 @@ class Model_Restaurant extends Orm\Model{
 	/**
 	 *
 	 */
-	public function get_menu_types()
+	public function get_menus()
 	{
-		$this->menuTypes = Model_Menu::get_menu_types_by_restaurant($this);
-		return $this;
+		return Model_Menu::get_menu_types_by_restaurant($this);
+
 	}
 
 	/**
@@ -36,16 +48,17 @@ class Model_Restaurant extends Orm\Model{
 	 */
 	public function get_menu($type)
 	{
-		$this->menu = Model_Menu::get_menu_by_restaurant($this, $type);
-		return $this;
+		return Markdown::parse(
+			Model_Menu::get_menu_by_restaurant($this, $type)->data
+			);
 	}
 	/**
 	 * get_location() function. Returns a location Object
 	 */
 	public function get_location()
 	{
-		$this->location = Model_Location::get_location_by_restaurant($this);
-		return $this;
+
+		return Model_Location::get_location_by_restaurant($this);
 	}// end get_location function
 	//======================================
 
@@ -54,8 +67,9 @@ class Model_Restaurant extends Orm\Model{
 	 */
 	public function get_markdown($type)
 	{
-		$this->markdown = Model_Markdown::get_markdown_by_restaurant($this, $type);
-		return $this;
+		return Markdown::parse(
+			Model_Markdown::get_markdown_by_restaurant($this, $type)->data
+		);
 	}// end get_markdowns() function
 	//======================================
 

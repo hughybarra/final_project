@@ -5,5 +5,7 @@
 ?>
 
 <div class="container">
-	<?= Markdown::parse($restaurant->get_menu($menuType)->menu->data)?>
+
+	<?php echo $restaurant->get_menu($menuType); ?>
+
 </div><!-- end container class -->

@@ -1,6 +1,6 @@
 
 
-<div class="container about">
+<div class="container">
 
 	<div class="sixteen columns">
 
@@ -10,7 +10,7 @@
 		</div><!-- end logo div -->
 
 		<div class="about-content">
-			<?= Markdown::parse($restaurant->get_markdown('about')->markdown->data) ?>
+			<?= $restaurant->get_markdown('about') ?>
 		</div><!-- end eight colums -->
 	</div>
 	<!-- end eight colums div -->

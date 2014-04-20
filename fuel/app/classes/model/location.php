@@ -30,7 +30,7 @@ class Model_Location extends Orm\Model
 	 */
 	// this was not working for some reason.
 	// public static function get_by_restaurant(Model_Resturant $restaurant)
-	public static function get_location_by_restaurant($restaurant)
+	public static function get_location_by_restaurant(Model_Restaurant $restaurant)
 	{
 		return static::query()->where('restaurant_id', $restaurant->id)->get_one();
 	}

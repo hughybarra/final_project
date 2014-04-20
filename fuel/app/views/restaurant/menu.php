@@ -1,20 +1,16 @@
 
 
 <div class="about-container">
-	<?php Markdown::parse($restaurant->get_menu('appetizers')->menu->data) ?>
+	<h4>Our Menus</h4>
+
 
 	<div class="menu-items sixteen columns">
 		<ul>
-			<?php
-				// loop over all resturant types and generate a link
-				foreach($restaurant->get_menu_types()->menuTypes as $val)
-				{
-					echo '<li>';
-					echo Html::anchor('http://localhost:8886/project/public/pizzajohns/menu/'.$val->type, $val->type);
-					// add thumbnail images in here
-					echo'</li>';
-				}// end for each loop
-			?>
+			<?php foreach($restaurant->get_menus() as $menu): ?>
+				<li>
+					<?= Html::anchor("{$restaurant->url}/menu/{$menu->type}", $menu->type) ?>
+				</li>
+			<?php endforeach; ?>
 		</ul>
 	</div><!-- end menu-items -->
 

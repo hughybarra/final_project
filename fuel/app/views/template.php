@@ -1,56 +1,40 @@
-<?= Html::doctype('html5') ?>
+<!DOCTYPE html>
+<html>
 	<head>
 		<title><?= $restaurant->name ?></title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 		<!-- Css -->
 		<!-- mayers reset -->
-		<?= Asset::css('reset.css') ?>
-		<!-- Skeleton Css -->
-		<?= Asset::css('skeleton.css') ?>
-		<!-- main css -->
-		<?= Asset::css('main.css') ?>
-		<script src="//vjs.zencdn.net/4.5/video.js"></script>
+		<?= Asset::css('template_1/reset.css') ?>
+		<?= Asset::css('template_1/main.css') ?>
+		<?= Asset::css('template_1/bootstrap.css') ?>
+
 	</head>
+	<body id="body">
+		<nav>
+			<ul>
+				<li><?=  Html::anchor('#home', 'Home')?></li>
+				<li><?=  Html::anchor('#about', 'about')?></li>
+				<li><?=  Html::anchor('#menu', 'Menu')?></li>
+				<li><?=  Html::anchor('#location', 'Location')?></li>
+			</ul>
+		</nav><!-- end navigation -->
 
-	<?php
-		// if page = home load in the videoslider
-	?>
-	<body>
+		<!-- fluid bootstrap container -->
+		<div class="container-fluid">
 
-<!-- 		<nav class="side-navigation">
-				<ul>
-					<li>About</li>
-					<li>Menu</li>
-					<li>Location</li>
-				</ul>
-		</nav> -->
-		<!-- end navigation -->
-		<div class="container">
-
-
-
-			<!-- end logo -->
+			<!-- php view data -->
 			<?= isset($body) ? $body : null ?>
 
-			<footer>
-			</footer>
+		</div><!-- end container fluid -->
 
-			<!-- Javascript -->
-			<!-- Jquery -->
-			<?= Asset::js('jquery-1.11.0.min.js', array(), null, true) ?>
-			<!-- jquery video -->
-			<link href="//vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
-			<!-- main.js -->
-			<?= Asset::js('main.js', array(), null, true) ?>
-		</div>
-		<!-- end container div -->
 
-</body>
+		<!-- Jquery -->
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<!-- Jquery Library -->
+		<!-- main.js -->
+		<?= Asset::js('template_1/main.js', array(), null, true) ?>
+
+	</body>
+
 </html>
-
-
-
-
-
-

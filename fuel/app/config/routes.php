@@ -10,7 +10,7 @@ return array(
 	//Restaurant Routing List
 	//--------------------------------
 
-	':url/menu/(:any)' => 'restaurant/menuType',
+	':url/menu/(:any)' => 'menu/view/$2',
 	':url/(:any)' => 'restaurant/$2',
 	':url'        => 'restaurant/view',
 );
