@@ -49,6 +49,7 @@ class Model_Menu extends Orm\Model
     public static function get_menu_by_restaurant(Model_Restaurant $restaurant, $type)
 	{
 		// return static::query()->where('restaurant_id', $restaurant->id)->get_one();
+		echo 'Menu get_menu_by_restaurant($restaurant, $type) running';
 		return static::query()->where('restaurant_id', $restaurant->id)->
 						where('type', $type)->
 						get_one();

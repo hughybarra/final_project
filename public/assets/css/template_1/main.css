@@ -84,7 +84,7 @@ nav ul li {
 	padding-top: 100px;
 	height: 100vh;
 	min-height: 800px;
-	background-color: blue;
+	/*background-color: blue;*/
 }
 
 .about-text-container {
@@ -114,10 +114,25 @@ nav ul li {
 .menu {
 	height: 100vh;
 	min-height: 800px;
-	background-color: green;
+	/*background-color: green;*/
 }
 
 
+/*
+██╗      ██████╗  ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+██║     ██╔═══██╗██╔════╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+██║     ██║   ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║
+██║     ██║   ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║
+███████╗╚██████╔╝╚██████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║
+╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+*/
+
+
+.location {
+	height: 100vh;
+	min-height: 800px;
+	background-color: yellow;
+}
 
 
 

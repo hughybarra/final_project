@@ -48,6 +48,7 @@ class Model_Restaurant extends Orm\Model{
 	 */
 	public function get_menu($type)
 	{
+		echo 'Restaurant get_menu($type) running';
 		return Markdown::parse(
 			Model_Menu::get_menu_by_restaurant($this, $type)->data
 			);

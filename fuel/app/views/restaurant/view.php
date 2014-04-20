@@ -21,7 +21,13 @@
 		<ul>
 			<?php foreach($restaurant->get_menus() as $menu): ?>
 				<li>
-					<?= Html::anchor("{$restaurant->url}/menu/{$menu->type}", $menu->type) ?>
+					<?php echo   Html::anchor("{$restaurant->url}/menu/{$menu->data}", $menu->type);
+					echo $menu->type;
+
+					echo $restaurant->get_menu($menu->type);
+					?>
+
+
 				</li>
 			<?php endforeach; ?>
 		</ul>
