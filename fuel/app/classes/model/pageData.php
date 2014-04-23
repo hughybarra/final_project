@@ -1,6 +1,6 @@
 <?php
 
-class Model_Markdown extends Orm\Model
+class Model_Pagedata extends Orm\Model
 {
 	protected static $_properties = array(
 		'id',
@@ -23,7 +23,7 @@ class Model_Markdown extends Orm\Model
     );
 
 
-    public static function get_markdown_by_restaurant(Model_Restaurant $restaurant, $type)
+    public static function get_pageData_by_restaurant(Model_Restaurant $restaurant, $type)
 	{
 
 		return static::query()

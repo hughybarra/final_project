@@ -48,7 +48,7 @@ class Model_Restaurant extends Orm\Model{
 	 */
 	public function get_menu($type)
 	{
-		echo 'Restaurant get_menu($type) running';
+
 		return Markdown::parse(
 			Model_Menu::get_menu_by_restaurant($this, $type)->data
 			);
@@ -64,14 +64,14 @@ class Model_Restaurant extends Orm\Model{
 	//======================================
 
 	/**
-	 * get_markdown() function. Returns the specified markdown if it exists
+	 * get_pageData() function. Returns the specified pageData if it exists
 	 */
-	public function get_markdown($type)
+	public function get_pageData($type)
 	{
 		return Markdown::parse(
-			Model_Markdown::get_markdown_by_restaurant($this, $type)->data
+			Model_PageData::get_pageData_by_restaurant($this, $type)->data
 		);
-	}// end get_markdowns() function
+	}// end get_pageData() function
 	//======================================
 
 	/**

@@ -18,4 +18,7 @@ $(function() {
 	$('.about-text-1').addClass('col-lg-4');
 	$('.about-text-2').addClass('col-lg-4');
 
+	// Menus
+	$('ul.menu-items > li').addClass('col-lg-4');
+
 });

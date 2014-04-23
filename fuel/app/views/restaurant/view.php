@@ -8,31 +8,25 @@
 
 
 <section class="about col-lg-12 pull-left" id="about">
-	<?= $restaurant->get_markdown('about') ?>
+	<?= $restaurant->get_pageData('about') ?>
 </section><!-- end about page -->
 
 
 
 <section class="menu col-lg-12 pull-left" id="menu">
 
-	<h4>Our Menus</h4>
+	<h3 class="text-center col-lg-2 col-lg-offset-1">Our Menus</h3>
 
-	<div class="menu-items sixteen columns">
-		<ul>
+		<ul class="menu-items col-lg-7">
+
+
 			<?php foreach($restaurant->get_menus() as $menu): ?>
 				<li>
-					<?php echo   Html::anchor("{$restaurant->url}/menu/{$menu->data}", $menu->type);
-
-					echo $menu->type;
-					echo '<hr>';
-					echo $restaurant->get_menu($menu->type);
-					?>
-
-
+					<?= Html::anchor("{$restaurant->url}/menu/{$menu->type}", $menu->type) ?>
 				</li>
 			<?php endforeach; ?>
-		</ul>
-	</div><!-- end menu-items -->
+		</ul><!-- end menu items -->
+
 
 </section><!-- end menu section -->
 
