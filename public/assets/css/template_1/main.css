@@ -43,7 +43,7 @@ nav ul li {
 
 .home {
 	width: 100%;
-	height: 100vh;
+	height: 800px;
 	min-height: 800px;
 	background: url("http://localhost:8886/project/public/assets/media/images/pizzajohns/background.jpg") no-repeat;
 }
@@ -82,7 +82,7 @@ nav ul li {
 
 .about {
 	padding-top: 100px;
-	height: 100vh;
+	height: 800px;
 	min-height: 800px;
 	/*background-color: blue;*/
 }
@@ -112,7 +112,7 @@ nav ul li {
 */
 
 .menu {
-	height: 100vh;
+	height: 800px;
 	min-height: 800px;
 	/*background-color: green;*/
 }
@@ -129,8 +129,11 @@ nav ul li {
 
 
 .location {
-	height: 100vh;
+	height: 800px;
 	min-height: 800px;
+	float: left;
+	clear: left;
+	width: 100%;
 	background-color: yellow;
 }
 

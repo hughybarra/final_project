@@ -22,8 +22,9 @@
 			<?php foreach($restaurant->get_menus() as $menu): ?>
 				<li>
 					<?php echo   Html::anchor("{$restaurant->url}/menu/{$menu->data}", $menu->type);
-					echo $menu->type;
 
+					echo $menu->type;
+					echo '<hr>';
 					echo $restaurant->get_menu($menu->type);
 					?>
 
