@@ -1,5 +1,5 @@
 $(function() {
-	console.log("init");
+
 
 	// grab image containers and give them widths
 	$('.about-container-1').addClass('col-lg-5 col-lg-offset-1');

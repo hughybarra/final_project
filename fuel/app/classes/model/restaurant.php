@@ -7,6 +7,8 @@ class Model_Restaurant extends Orm\Model{
 		'name',
 		'url',
 		'active',
+		'latitude',
+		'longitude',
 		'created_at',
 		'updated_at'
 	);

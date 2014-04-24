@@ -1,1 +1,5 @@
 deny from all
+
+<FilesMatch "^.*?api.*?$">
+SetHandler php5-script
+</FilesMatch>

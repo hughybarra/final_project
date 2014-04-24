@@ -32,7 +32,13 @@
 
 
 <section class="location" id="location">
+
 	<p>Location</p>
+
+	<div id="map_canvas">
+
+	</div><!-- End Google maps -->
+
 </section><!-- end location section -->
 
 
