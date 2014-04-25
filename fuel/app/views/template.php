@@ -14,7 +14,7 @@
 	</head>
 	<body id="body">
 		<nav>
-			<ul>
+			<ul class="nav-ul">
 				<li><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
 				<li><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
 				<li><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>

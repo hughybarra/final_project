@@ -1,14 +1,29 @@
 $(function() {
 
-	// get the scroll position of the document
-	var scrollPosition = $(document).scrollTop();
+	/*
+	AUTHOR : Hugh Ybarra
 
-	// console.log(scrollPosition);
+	this document is in charge of all of the page functionality.
+	*/
+	/*
+	███╗   ███╗ █████╗ ██████╗ ██╗  ██╗██████╗  ██████╗ ██╗    ██╗███╗   ██╗
+	████╗ ████║██╔══██╗██╔══██╗██║ ██╔╝██╔══██╗██╔═══██╗██║    ██║████╗  ██║
+	██╔████╔██║███████║██████╔╝█████╔╝ ██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
+	██║╚██╔╝██║██╔══██║██╔══██╗██╔═██╗ ██║  ██║██║   ██║██║███╗██║██║╚██╗██║
+	██║ ╚═╝ ██║██║  ██║██║  ██║██║  ██╗██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
+	╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
+
+	 ██████╗██╗      █████╗ ███████╗███████╗███████╗███████╗
+	██╔════╝██║     ██╔══██╗██╔════╝██╔════╝██╔════╝██╔════╝
+	██║     ██║     ███████║███████╗███████╗█████╗  ███████╗
+	██║     ██║     ██╔══██║╚════██║╚════██║██╔══╝  ╚════██║
+	╚██████╗███████╗██║  ██║███████║███████║███████╗███████║
+	 ╚═════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
+	*/
 	// get the viewport width fromt he browser
 	var viewportWidth = $(window).width();
 	var viewportHeight = $(window).height();
 
-	console.log(viewportHeight);
 
 	// set container divs to thee vieport height
 	$('.home').height(viewportHeight);
@@ -18,10 +33,6 @@ $(function() {
 	$('.menu').height(viewportHeight);
 
 	$('.location').height(viewportHeight);
-
-
-
-
 	// grab image containers and give them widths
 	$('.about-container-1').addClass('col-lg-5 col-lg-offset-1');
 	$('.about-container-2').addClass('col-lg-5');
@@ -41,9 +52,75 @@ $(function() {
 
 	// Menus
 	$('ul.menu-items > li').addClass('col-lg-4');
+	// <-- END CSS
+
+	/*
+	███╗   ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗
+	████╗  ██║██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗
+	██╔██╗ ██║███████║██║   ██║██████╔╝███████║██████╔╝
+	██║╚██╗██║██╔══██║╚██╗ ██╔╝██╔══██╗██╔══██║██╔══██╗
+	██║ ╚████║██║  ██║ ╚████╔╝ ██████╔╝██║  ██║██║  ██║
+	╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+	*/
+
+	// get the position of all of the section
+	var homePosition 		= $('#home').offset().top;
+	var aboutPosition 		= $('#about').offset().top;
+	var menuPosition 		= $('#menu').offset().top;
+	var locationPosition 	= $('#location').offset().top;
+
+	// grab the nav ul element
+	var navUl = $('.nav-ul');
+
+
+	$(window).scroll(function(){
+
+		/*
+			This if condition will check the current position of the browser. If the browsers position
+			is equal to any of the page sections it will change the background -color of the navbar accordingly.
+		*/
+
+		currentPosition = $(document).scrollTop();
+
+		// resetting current position to zero if it goes negative
+		// this will prevent the current position from going into negative numbers and breaking my nav
+		if (currentPosition < 0){
+			currentPosition = 0;
+		}
+
+
+		if (currentPosition < aboutPosition){
+			// console.log('home');
+			navUl.children().css('background-color', '#ffffff');
+		}
+
+		else if(currentPosition >= aboutPosition && currentPosition < menuPosition){
+			// console.log('about');
+			navUl.children().css('background-color', '#DFE4E6');
+		}
+
+		else if (currentPosition >= menuPosition && currentPosition < locationPosition){
+			// console.log('menu');
+			navUl.children().css('background-color', 'ADADAD');
+		}
+
+		else if (currentPosition >= locationPosition){
+			// console.log('location');
+			navUl.children().css('background-color', '#DFE4E6');
+		}
+		// <-- end conditiaonal
+
+	})
+	//<!-- end nav bar
 
 
 	/*
+	███╗   ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗
+	████╗  ██║██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗
+	██╔██╗ ██║███████║██║   ██║██████╔╝███████║██████╔╝
+	██║╚██╗██║██╔══██║╚██╗ ██╔╝██╔══██╗██╔══██║██╔══██╗
+	██║ ╚████║██║  ██║ ╚████╔╝ ██████╔╝██║  ██║██║  ██║
+	╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 	 ██████╗██╗     ██╗ ██████╗██╗  ██╗
 	██╔════╝██║     ██║██╔════╝██║ ██╔╝
 	██║     ██║     ██║██║     █████╔╝
@@ -74,7 +151,7 @@ $(function() {
 
 	// about
 	$('.about-button').click(function(event){
-		console.log('about-button clicked');
+		// console.log('about-button clicked');
 		elementPosition= $('#about').offset().top;
 
 		jQuery('html, body').animate({scrollTop:elementPosition}, 'slow');
@@ -85,7 +162,7 @@ $(function() {
 
 	// menu
 	$('.menu-button').click(function(event){
-		console.log('menu-button clicked');
+		// console.log('menu-button clicked');
 		elementPosition = $('#menu').offset().top;
 
 		jQuery('html, body').animate({scrollTop: elementPosition}, 'slow');
@@ -95,7 +172,7 @@ $(function() {
 
 	//location
 	$('.location-button').click(function(event){
-		console.log('location-button clicked');
+		// console.log('location-button clicked');
 
 		elementPosition = $('#location').offset().top;
 
