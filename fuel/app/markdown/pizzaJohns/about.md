@@ -1,5 +1,3 @@
-
-
 <div class="about-container-1">
 	<img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/1.jpg" alt="image of pizza" class="about-image-2">
 </div>

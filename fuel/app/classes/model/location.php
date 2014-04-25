@@ -9,7 +9,7 @@ class Model_Location extends Orm\Model
 		'city',
 		'state',
 		'zip',
-
+		'full_address',
 		'created_at',
 		'updated_at',
 	);

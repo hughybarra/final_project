@@ -44,7 +44,7 @@ nav ul li {
 .home {
 	float: left;
 	width: 100%;
-	height: 100vh;
+	/*height: 800px;*/
 	min-height: 800px;
 	background: url("http://localhost:8886/project/public/assets/media/images/pizzajohns/background.jpg") no-repeat;
 }
@@ -83,10 +83,17 @@ nav ul li {
 
 .about {
 	padding-top: 100px;
-	height: 800px;
-	height: 100vh;
-	min-height: 500px;
-	/*background-color: blue;*/
+	min-height: 800px;
+
+background: #f9f3e5; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f3e5 0%, #e5dccc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f3e5), color-stop(100%,#e5dccc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f3e5 0%,#e5dccc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f3e5 0%,#e5dccc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f3e5 0%,#e5dccc 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f3e5 0%,#e5dccc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f3e5', endColorstr='#e5dccc',GradientType=0 ); /* IE6-9 */
+
 }
 
 .about-text-container {
@@ -94,9 +101,9 @@ nav ul li {
 }
 
 .about img {
-	border-radius: 10px;
+/*	border-radius: 10px;
   	border: 20px solid #d5d2d2;
-
+*/
 }
 .about-text {
 	clear: left;
@@ -114,11 +121,25 @@ nav ul li {
 */
 
 .menu {
-	height: 100vh;
-	min-height: 400px;
-	/*background-color: green;*/
+
+	min-height: 800px;
+	height: auto;
+
+	background: #bcbcbc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #bcbcbc 0%, #c6c6c6 47%, #c9c9c9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bcbcbc), color-stop(47%,#c6c6c6), color-stop(100%,#c9c9c9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #bcbcbc 0%,#c6c6c6 47%,#c9c9c9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #bcbcbc 0%,#c6c6c6 47%,#c9c9c9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #bcbcbc 0%,#c6c6c6 47%,#c9c9c9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #bcbcbc 0%,#c6c6c6 47%,#c9c9c9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+
 }
-.menu h4{
+.inner-menu-container{
+	margin-top: 100px;
+}
+.menu-text-container {
+	margin-top: 50px;
 }
 
 .menu-items {
@@ -158,12 +179,21 @@ nav ul li {
 
 
 .location {
-	height: 800px;
 	min-height: 800px;
 	float: left;
 	clear: left;
 	width: 100%;
-	background-color: yellow;
+	color: white;
+
+	background: #777777; /* Old browsers */
+	background: -moz-linear-gradient(top,  #777777 0%, #757575 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#777777), color-stop(100%,#757575)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #777777 0%,#757575 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #777777 0%,#757575 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #777777 0%,#757575 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #777777 0%,#757575 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#757575',GradientType=0 ); /* IE6-9 */
+
 }
 
 /*
@@ -175,10 +205,14 @@ nav ul li {
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝
 */
 
+.inner-location-container{
+	margin-top: 150px;
+}
 #map_canvas {
-	width: 500px;
+	width: 800px;
 	height: 400px;
 	background-color: #CCC;
+	border: 20px solid white;
 }
 
 

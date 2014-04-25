@@ -1,0 +1,15 @@
+
+
+### Hours
+
+MONDAY - THURSDAY
+
+5:00 am - 12:00 am
+
+FRIDAY - SATURDAY
+
+10:00 AM - 2:00AM
+
+SUNDAY
+
+12:00 PM - 5:00PM
