@@ -15,6 +15,7 @@
 
 <section class="menu col-lg-12 pull-left" id="menu">
 
+
 	<h3 class="text-center col-lg-2 col-lg-offset-1">Our Menus</h3>
 
 		<ul class="menu-items col-lg-7">
@@ -31,7 +32,7 @@
 </section><!-- end menu section -->
 
 
-<section class="location" id="location">
+<section class="location col-lg-12 pull-left" id="location">
 
 	<p>Location</p>
 
