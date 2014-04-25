@@ -15,10 +15,10 @@
 	<body id="body">
 		<nav>
 			<ul>
-				<li><?=  Html::anchor('#home', 'Home')?></li>
-				<li><?=  Html::anchor('#about', 'about')?></li>
-				<li><?=  Html::anchor('#menu', 'Menu')?></li>
-				<li><?=  Html::anchor('#location', 'Location')?></li>
+				<li><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
+				<li><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
+				<li><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
+				<li><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
 			</ul>
 		</nav><!-- end navigation -->
 

@@ -2,10 +2,13 @@ $(function() {
 
 	// get the scroll position of the document
 	var scrollPosition = $(document).scrollTop();
-	console.log(scrollPosition);
+
+	// console.log(scrollPosition);
 	// get the viewport width fromt he browser
 	var viewportWidth = $(window).width();
 	var viewportHeight = $(window).height();
+
+	console.log(viewportHeight);
 
 	// set container divs to thee vieport height
 	$('.home').height(viewportHeight);
@@ -15,6 +18,8 @@ $(function() {
 	$('.menu').height(viewportHeight);
 
 	$('.location').height(viewportHeight);
+
+
 
 
 	// grab image containers and give them widths
@@ -36,5 +41,68 @@ $(function() {
 
 	// Menus
 	$('ul.menu-items > li').addClass('col-lg-4');
+
+
+	/*
+	 ██████╗██╗     ██╗ ██████╗██╗  ██╗
+	██╔════╝██║     ██║██╔════╝██║ ██╔╝
+	██║     ██║     ██║██║     █████╔╝
+	██║     ██║     ██║██║     ██╔═██╗
+	╚██████╗███████╗██║╚██████╗██║  ██╗
+	 ╚═════╝╚══════╝╚═╝ ╚═════╝╚═╝  ╚═╝
+	*/
+	// declaring vars
+	var myPosition = '';
+
+	/*
+	The follwing click functions are for click scrolling. When the user clicks on a nav link
+	they will scroll to the position of the element as it sits on the page.
+	*/
+	// home
+	$('.home-button').click(function(event){
+		console.log('home-button clicked');
+
+		// grab the pixle position of an element offset from the top of the document.
+		elementPosition = $('#home').offset().top;
+		// when clicked have the page animate to the above pixle position
+		jQuery('html, body').animate({scrollTop:elementPosition}, 'slow');
+
+		// prevent default link behavior
+		event.preventDefault
+		return false;
+	});
+
+	// about
+	$('.about-button').click(function(event){
+		console.log('about-button clicked');
+		elementPosition= $('#about').offset().top;
+
+		jQuery('html, body').animate({scrollTop:elementPosition}, 'slow');
+
+		event.preventDefault
+		return false;
+	});
+
+	// menu
+	$('.menu-button').click(function(event){
+		console.log('menu-button clicked');
+		elementPosition = $('#menu').offset().top;
+
+		jQuery('html, body').animate({scrollTop: elementPosition}, 'slow');
+		event.preventDefault
+		return false;
+	});
+
+	//location
+	$('.location-button').click(function(event){
+		console.log('location-button clicked');
+
+		elementPosition = $('#location').offset().top;
+
+		jQuery('html, body').animate({scrollTop: elementPosition}, 'slow');
+		event.preventDefault
+		return false;
+	});// end location click
+	// <----- END SCROLLING CLICK FUNCTION
 
 });
