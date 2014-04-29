@@ -28,9 +28,9 @@ $(function() {
 	// set container divs to thee vieport height
 	$('.home').height(viewportHeight);
 
-	$('.about').height(viewportHeight);
+	// $('.about').height(viewportHeight);
 
-	$('.menu').height(viewportHeight);
+	// $('.menu').height(viewportHeight);
 
 	$('.location').height(viewportHeight);
 	// grab image containers and give them widths

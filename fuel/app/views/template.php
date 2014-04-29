@@ -3,6 +3,7 @@
 	<head>
 		<title><?= $restaurant->name ?></title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Css -->
 		<!-- mayers reset -->
 		<?= Asset::css('template_1/reset.css') ?>
@@ -13,7 +14,8 @@
 
 	</head>
 	<body id="body">
-		<nav>
+
+		<nav class="my-nav">
 			<ul class="nav-ul">
 				<li><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
 				<li><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
