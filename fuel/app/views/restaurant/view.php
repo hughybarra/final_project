@@ -6,7 +6,7 @@
 
 	<div class="logo col-lg-6 col-lg-offset-3
 				col-md-6 col-md-offset-3
-				col-sm-6 col-sm-offset-3
+				col-sm-7 col-sm-offset-3
 				col-xs-12  pull-left">
 
 		<?= Html::img('http://localhost:8886/project/public/assets/media/images/pizzajohns/logo.png', array("alt" => "Restaurant Logo",
