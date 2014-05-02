@@ -34,8 +34,8 @@ $(function() {
 
 	$('.location').height(viewportHeight);
 	// grab image containers and give them widths
-	$('.about-container-1').addClass('col-lg-5 col-lg-offset-1');
-	$('.about-container-2').addClass('col-lg-5');
+	$('.about-container-1').addClass('col-lg-5 col-sm-6 col-lg-offset-1');
+	$('.about-container-2').addClass('col-lg-5 col-sm-6');
 	// add class to images
 	$('.about-image-1').addClass('img-responsive img-rounded');
 	$('.about-image-2').addClass('img-responsive img-rounded');
@@ -71,6 +71,7 @@ $(function() {
 
 	// grab the nav ul element
 	var navUl = $('.nav-ul');
+	var phoneText = $('.phone-text');
 
 
 	$(window).scroll(function(){
@@ -92,21 +93,26 @@ $(function() {
 		if (currentPosition < aboutPosition){
 			// console.log('home');
 			navUl.children().css('background-color', '#ffffff');
+			phoneText.css('color', '#FFFFFF');
+
 		}
 
 		else if(currentPosition >= aboutPosition && currentPosition < menuPosition){
 			// console.log('about');
 			navUl.children().css('background-color', '#DFE4E6');
+			phoneText.css('color', '#000000');
 		}
 
 		else if (currentPosition >= menuPosition && currentPosition < locationPosition){
 			// console.log('menu');
 			navUl.children().css('background-color', 'ADADAD');
+			phoneText.css('color', '#000000');
 		}
 
 		else if (currentPosition >= locationPosition){
 			// console.log('location');
 			navUl.children().css('background-color', '#DFE4E6');
+			phoneText.css('color', '#FFFFFF');
 		}
 		// <-- end conditiaonal
 
@@ -181,5 +187,15 @@ $(function() {
 		return false;
 	});// end location click
 	// <----- END SCROLLING CLICK FUNCTION
+
+
+	/* Phone Call */
+	$('.phone-contact').click(function(){
+		console.log('phone call');
+		var phoneNumber = $('.phone-digits').text();
+		console.log(phoneNumber);
+		window.location.href="tel://"+phoneNumber;
+	});//End phone call click function
+	// <------ END PHONE CALL FUNCTION
 
 });

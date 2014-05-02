@@ -15,14 +15,22 @@
 	</head>
 	<body id="body">
 
+		<!-- <img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/menu.png" alt="image of pizza" class="nav-slider"> -->
+
 		<nav class="my-nav">
 			<ul class="nav-ul">
-				<li><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
-				<li><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
-				<li><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
-				<li><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
+				<li class="home-button"><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
+				<li class="about-button"><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
+				<li class="menu-button"><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
+				<li class="location-button"><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
 			</ul>
 		</nav><!-- end navigation -->
+
+		<!-- Contact Information -->
+		<div class="phone-contact">
+			<span class="phone-digits"><?php echo $restaurant->get_location()->phone_raw ?></span>
+			<p class='phone-text text-center'>Give us a Call</p><a class="text-center" href="tel:<?php echo $restaurant->get_location()->phone_raw ?>"><?= $restaurant->get_location()->phone_number ?></a>
+		</div>
 
 		<!-- fluid bootstrap container -->
 		<div class="container-fluid">

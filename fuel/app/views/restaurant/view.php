@@ -4,10 +4,12 @@
 <section class="home col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left" id="home">
 
 
-	<div class="logo col-lg-6 col-lg-offset-3
-				col-md-6 col-md-offset-3
+	<div class="logo
+				col-xs-12
 				col-sm-7 col-sm-offset-3
-				col-xs-12  pull-left">
+				col-md-6 col-md-offset-3
+				col-lg-6 col-lg-offset-3
+				 pull-left">
 
 		<?= Html::img('http://localhost:8886/project/public/assets/media/images/pizzajohns/logo.png', array("alt" => "Restaurant Logo",
 																'class' => "col-lg-6 col-lg-offset-3
@@ -19,32 +21,41 @@
 </section><!-- end home -->
 
 
-<section class="about col-lg-12 col-md-12 pull-left
+<section class="about col-lg-12  pull-left
+					  col-sm-12
+					  col-md-12
 					  col-xs-12 " id="about">
+
 	<?= $restaurant->get_pageData('about') ?>
+
 </section><!-- end about page -->
 
 
 
-<section class="menu col-xs-12 col-md-12 col-lg-12    pull-left" id="menu">
+<section class="menu col-xs-12
+					 col-md-12
+					 col-lg-12    pull-left" id="menu">
 
 	<div class="inner-menu-container">
 
-		<div class="menu-container-1 col-lg-5 col-lg-offset-1">
+		<div class="menu-container-1 col-lg-5 col-lg-offset-1
+									 col-sm-6">
 
 			<img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/1.jpg" alt="image of pizza" class="menu-image-2 img-responsive img-rounded">
 
 		</div>
 
-		<div class="menu-container-10 col-lg-5">
+		<div class="menu-container-10 col-lg-5
+									  col-sm-6
+									  ">
 
-			<img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/1.jpg" alt="image of pizza" class="menu-image-2 img-responsive img-rounded	">
+			<img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/1.jpg" alt="image of pizza" class="menu-image-2 img-responsive img-rounded">
 
 		</div>
 
 		<div class="menu-text-container row col-xs-12 col-lg-12 pull-left">
 
-			<h3 class=" col-xs-5 col-lg-2 col-lg-offset-1 pull-left">Our Menus</h3>
+			<h3 class=" col-xs-5 col-lg-2 col-lg-offset-1 text-center">Our Menus</h3>
 
 			<ul class="menu-items col-xs-7 col-lg-7 pull-left" >
 

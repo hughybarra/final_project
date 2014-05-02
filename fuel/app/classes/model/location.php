@@ -9,6 +9,8 @@ class Model_Location extends Orm\Model
 		'city',
 		'state',
 		'zip',
+		'phone_number',
+		'phone_raw',
 		'full_address',
 		'created_at',
 		'updated_at',
@@ -34,5 +36,6 @@ class Model_Location extends Orm\Model
 	{
 		return static::query()->where('restaurant_id', $restaurant->id)->get_one();
 	}
+
 
 }
