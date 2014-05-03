@@ -14,9 +14,6 @@
 
 	</head>
 	<body id="body">
-
-		<!-- <img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/menu.png" alt="image of pizza" class="nav-slider"> -->
-
 		<nav class="my-nav">
 			<ul class="nav-ul">
 				<li class="home-button"><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>

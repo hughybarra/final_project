@@ -1,5 +1,8 @@
+
 <div id="background-image">
-	<?= Html::img("assets/media/images/pizzajohns/background.jpg", array('alt' => 'Restaurant background image', 'class' => '')) ?>
+	<?= Asset::img($restaurant->get_media('background.jpg')->path, array('alt'=>$restaurant->get_media('1.jpg')->alt,
+													'class' => ""
+													))?>
 </div>
 <section class="home col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left" id="home">
 
@@ -19,6 +22,7 @@
 																			col-xs-12 col-xs-offset-3
 																			image-responsive")) ?>
 	</div>
+
 </section><!-- end home -->
 
 
@@ -44,36 +48,27 @@
 
 </section><!-- end about page -->
 
+<section class="menu 	col-lg-12 pull-left
+						col-sm-12
+						col-md-12
+						col-xs-12" id="menu">
 
+	<div class="inner-menu-container col-lg-12">
 
-<section class="menu col-xs-12
-					 col-md-12
-					 col-lg-12    pull-left" id="menu">
+		<div class="menu-container-1 col-lg-5 col-sm-6 col-lg-offset-1">
 
-	<div class="inner-menu-container">
-
-		<div class="menu-image-container 	col-xs-12
-											col-sm-6
-											col-md-6
-											col-lg-5 col-lg-offset-1
-											menu-container-1
-									 		">
 			<?= Asset::img($restaurant->get_media('3.jpg')->path, array('alt'=>$restaurant->get_media('3.jpg')->alt,
-													'class' => "img-responsive img-rounded"
+													'class' => "menu-image-1 img-responsive img-rounded"
 													))?>
 		</div>
 
-		<div class="menu-image-container 	col-xs-12
-											col-sm-12
-											col-md-6
-									  		col-lg-5
-									  		menu-container-2
-									  		">
+		<div class="menu-container-2 col-lg-5 col-sm-6">
 
 			<?= Asset::img($restaurant->get_media('4.jpg')->path, array('alt'=>$restaurant->get_media('4.jpg')->alt,
-																'class' => "img-responsive img-rounded"
+																'class' => "menu-image-2 img-responsive img-rounded"
 																))?>
 		</div>
+
 
 		<div class="menu-text-container row col-xs-12 col-lg-12 pull-left">
 
