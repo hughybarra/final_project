@@ -43,11 +43,13 @@ PRIMARY KEY (id)
 
 CREATE TABLE medias
 (
-id int NOT NULL,
+id int AUTO_INCREMENT NOT NULL,
 restaurant_id int NOT NULL,
-
-media_type int NOT NULL,
+identifier VARCHAR(255) NOT NULL,
+media_type VARCHAR(255) NULL,
 path VARCHAR(255) NOT NULL,
+alt VARCHAR(255) NOT NULL,
+
 
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL,

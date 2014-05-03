@@ -11,7 +11,8 @@
 				col-lg-6 col-lg-offset-3
 				 pull-left">
 
-		<?= Html::img('http://localhost:8886/project/public/assets/media/images/pizzajohns/logo.png', array("alt" => "Restaurant Logo",
+
+		<?= Asset::img($restaurant->get_media('logo.png')->path, array("alt" => $restaurant->get_media('logo.png')->alt,
 																'class' => "col-lg-6 col-lg-offset-3
 																			col-md-6 col-md-offset-3
 																			col-sm-6 col-sm-offset-3
@@ -26,6 +27,19 @@
 					  col-md-12
 					  col-xs-12 " id="about">
 
+	<div class="about-container-1">
+		<?= Asset::img($restaurant->get_media('1.jpg')->path, array('alt'=>$restaurant->get_media('1.jpg')->alt,
+															'class' => " about-image-1 img-responsive img-rounded"
+															))?>
+	</div>
+
+	<div class="about-container-2">
+
+		<?= Asset::img($restaurant->get_media('2.jpg')->path, array('alt'=>$restaurant->get_media('2.jpg')->alt,
+													'class' => " about-image-2 img-responsive img-rounded"
+													))?>
+	</div>
+
 	<?= $restaurant->get_pageData('about') ?>
 
 </section><!-- end about page -->
@@ -38,19 +52,27 @@
 
 	<div class="inner-menu-container">
 
-		<div class="menu-container-1 col-lg-5 col-lg-offset-1
-									 col-sm-6">
-
-			<img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/1.jpg" alt="image of pizza" class="menu-image-2 img-responsive img-rounded">
-
+		<div class="menu-image-container 	col-xs-12
+											col-sm-6
+											col-md-6
+											col-lg-5 col-lg-offset-1
+											menu-container-1
+									 		">
+			<?= Asset::img($restaurant->get_media('3.jpg')->path, array('alt'=>$restaurant->get_media('3.jpg')->alt,
+													'class' => "img-responsive img-rounded"
+													))?>
 		</div>
 
-		<div class="menu-container-10 col-lg-5
-									  col-sm-6
-									  ">
+		<div class="menu-image-container 	col-xs-12
+											col-sm-12
+											col-md-6
+									  		col-lg-5
+									  		menu-container-2
+									  		">
 
-			<img src="http://localhost:8886/project/public/assets/media/images/pizzajohns/1.jpg" alt="image of pizza" class="menu-image-2 img-responsive img-rounded">
-
+			<?= Asset::img($restaurant->get_media('4.jpg')->path, array('alt'=>$restaurant->get_media('4.jpg')->alt,
+																'class' => "img-responsive img-rounded"
+																))?>
 		</div>
 
 		<div class="menu-text-container row col-xs-12 col-lg-12 pull-left">

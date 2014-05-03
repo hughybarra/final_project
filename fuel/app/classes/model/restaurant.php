@@ -37,6 +37,14 @@ class Model_Restaurant extends Orm\Model{
 	);
 
 	/**
+	* This function goes into the Media model and runs the get_media_by_restaurant function which
+	* will be grabbing all of the media information belonging to a specific identifier and returning that media Object
+	*/
+	public function get_media($identifier){
+		return Model_Media::get_media_by_restaurant($this, $identifier);
+	}
+
+	/**
 	 *
 	 */
 	public function get_menus()

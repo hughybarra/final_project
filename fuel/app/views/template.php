@@ -27,10 +27,7 @@
 		</nav><!-- end navigation -->
 
 		<!-- Contact Information -->
-		<div class="phone-contact">
-			<span class="phone-digits"><?php echo $restaurant->get_location()->phone_raw ?></span>
-			<p class='phone-text text-center'>Give us a Call</p><a class="text-center" href="tel:<?php echo $restaurant->get_location()->phone_raw ?>"><?= $restaurant->get_location()->phone_number ?></a>
-		</div>
+
 
 		<!-- fluid bootstrap container -->
 		<div class="container-fluid">
