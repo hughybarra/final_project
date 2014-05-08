@@ -14,16 +14,8 @@
 
 	</head>
 	<body id="body">
-		<nav class="my-nav">
-			<ul class="nav-ul">
-				<li class="home-button"><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
-				<li class="about-button"><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
-				<li class="menu-button"><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
-				<li class="location-button"><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
-			</ul>
-		</nav><!-- end navigation -->
 
-		<!-- Contact Information -->
+
 
 
 		<!-- fluid bootstrap container -->

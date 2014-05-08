@@ -1,3 +1,14 @@
+<nav class="my-nav">
+	<ul class="nav-ul">
+		<li class="home-button"><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
+		<li class="about-button"><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
+		<li class="menu-button"><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
+		<li class="location-button"><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
+	</ul>
+</nav><!-- end navigation -->
+
+
+
 
 <div id="background-image">
 	<?= Asset::img($restaurant->get_media('background.jpg')->path, array('alt'=>$restaurant->get_media('1.jpg')->alt,
@@ -48,21 +59,31 @@
 
 </section><!-- end about page -->
 
-<section class="menu 	col-lg-12 pull-left
-						col-sm-12
-						col-md-12
-						col-xs-12" id="menu">
+<section class="menu col-lg-12
+					 col-md-12
+					 col-sm-12
+					 col-xs-12 pull-left"
+							id="menu">
 
-	<div class="inner-menu-container col-lg-12">
+	<div class="inner-menu-container row">
 
-		<div class="menu-container-1 col-lg-5 col-sm-6 col-lg-offset-1">
+		<div class="menu-container-1 col-lg-5  col-lg-offset-1
+									 col-md-6
+									 col-sm-6
+
+											">
 
 			<?= Asset::img($restaurant->get_media('3.jpg')->path, array('alt'=>$restaurant->get_media('3.jpg')->alt,
 													'class' => "menu-image-1 img-responsive img-rounded"
 													))?>
 		</div>
 
-		<div class="menu-container-2 col-lg-5 col-sm-6">
+		<div class="menu-container-2 col-lg-5
+									 col-md-6
+									 col-sm-6
+									 col-xs-11
+
+									 ">
 
 			<?= Asset::img($restaurant->get_media('4.jpg')->path, array('alt'=>$restaurant->get_media('4.jpg')->alt,
 																'class' => "menu-image-2 img-responsive img-rounded"
@@ -78,12 +99,17 @@
 
 
 				<?php foreach($restaurant->get_menus() as $menu): ?>
+
 					<li>
 						<?= Html::anchor("{$restaurant->url}/menu/{$menu->type}", $menu->type) ?>
 					</li>
+
 				<?php endforeach; ?>
+
 			</ul><!-- end menu items -->
+
 		</div><!-- end menu text -->
+
 	</div><!-- end inner menu container -->
 
 

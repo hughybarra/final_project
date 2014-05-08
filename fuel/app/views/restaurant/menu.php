@@ -4,7 +4,7 @@
 	<h4>Our Menus</h4>
 
 
-	<div class="menu-items sixteen columns">
+	<div class="menu-page-items col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 		<ul>
 			<?php foreach($restaurant->get_menus() as $menu): ?>
 				<li>

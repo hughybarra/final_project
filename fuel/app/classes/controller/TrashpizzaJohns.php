@@ -31,10 +31,5 @@ class Controller_PizzaJohns extends Controller_Template
 
 		// gret the restaurant id
 
-
-
-
-
-
 	}
 }
