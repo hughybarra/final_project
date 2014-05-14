@@ -10,13 +10,10 @@
 		<?= Asset::css('template_1/main.css') ?>
 		<?= Asset::css('template_1/bootstrap.css') ?>
 		<!-- Javascript -->
-
-
+		<!-- Favicon -->
+		<link rel="shortcut icon" href=" <?php echo Asset::get_file($restaurant->get_media('favicon.ico')->path, 'img'); ?>">
 	</head>
 	<body id="body">
-
-
-
 
 		<!-- fluid bootstrap container -->
 		<div class="container-fluid">

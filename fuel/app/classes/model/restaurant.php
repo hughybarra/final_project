@@ -9,6 +9,7 @@ class Model_Restaurant extends Orm\Model{
 		'active',
 		'latitude',
 		'longitude',
+		'template',
 		'created_at',
 		'updated_at'
 	);
@@ -42,6 +43,13 @@ class Model_Restaurant extends Orm\Model{
 	*/
 	public function get_media($identifier){
 		return Model_Media::get_media_by_restaurant($this, $identifier);
+	}
+
+	/**
+	*
+	**/
+	public function get_template(){
+
 	}
 
 	/**

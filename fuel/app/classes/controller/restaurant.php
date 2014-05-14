@@ -22,8 +22,6 @@ class Controller_Restaurant extends Controller_Template
 			throw new HttpNotFoundException;
 		}
 
-
-
 		// check if template is defined to avoid template errors with ajax requests
 		if ($this->template)
 		{
