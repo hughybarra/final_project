@@ -46,13 +46,6 @@ class Model_Restaurant extends Orm\Model{
 	}
 
 	/**
-	*
-	**/
-	public function get_template(){
-
-	}
-
-	/**
 	 *
 	 */
 	public function get_menus()
@@ -101,5 +94,11 @@ class Model_Restaurant extends Orm\Model{
 	}// end get_by_url function
 	//======================================
 
+	/**
+	*
+	*/
+	public static function get_template(){
+		return static::query()->select('template')->where('restaurant_id', $restaurant->id)->get_one();
+	}
 
 }

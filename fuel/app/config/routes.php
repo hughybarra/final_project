@@ -7,10 +7,18 @@ return array(
 	'login'  => 'user/login',
 	'signup' => 'user/signup',
 
+
+	'files/(:any)'  => 'files/$1',
+
+
 	//Restaurant Routing List
 	//--------------------------------
 
 	':url/menu/(:any)' => 'menu/view/$2',
 	':url/(:any)' => 'restaurant/$2',
 	':url'        => 'restaurant/view',
+
+
+
+
 );

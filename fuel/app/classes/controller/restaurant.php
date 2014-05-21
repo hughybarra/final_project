@@ -27,6 +27,30 @@ class Controller_Restaurant extends Controller_Template
 		{
 			$this->template->set_global('restaurant', $this->restaurant, false);
 		}
+
+		/*
+		I'm going to try somehting interesting here. This might be bad, i'm not really sure. It seemed
+		like a good idea at the time.
+
+		So the plan is to load in a view file. Set all of the variables. Once the variables have been put into place
+		i'm going to copy that file and paste it into the public css file for rendering. I'm sure there is a better way
+		but i could not figure out a better way to do it.
+		*/
+
+		// set restaurant
+
+
+
+
+	}
+
+	/*
+	*Delete this when done
+	*/
+	public function get_test()
+	{
+		// echo 'this is running';
+		$this->template->body = View::forge("restaurant/trash", []);
 	}
 
 	/**
@@ -34,7 +58,12 @@ class Controller_Restaurant extends Controller_Template
 	 */
 	public function get_view()
 	{
-		$this->template->body = View::forge('restaurant/view', []);
+		/*
+		* checking for the template version to load.
+		*/
+
+		$this->template->body = View::forge("restaurant/{$this->restaurant->template}", []);
+
 	}
 
 	public function get_about()

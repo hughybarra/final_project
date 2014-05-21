@@ -1,0 +1,121 @@
+
+
+.background-images{
+
+}
+
+.bg-image{
+	  position: fixed;
+	  top: 0;
+	  left: 1;
+	  width: 100%;
+}
+
+.logo {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 2;
+
+}
+
+
+/* navigation */
+/* -----------*/
+nav {
+	position: fixed;
+	top: 10px;
+	height: 50px;
+	z-index: 1;
+
+	width: 100px;
+	height: auto;
+	margin-left: 10px;
+	margin-top: 25px;
+}
+
+nav ul li {
+	line-height: 45px;
+	height: 45px;
+	text-align: center;
+}
+
+/* Home */
+/* ---------- */
+.home {
+	/*background-color: green;*/
+	width: 100vw;
+	height: 100vh;
+}
+/* div images */
+/*------------ */
+.div-image{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	/*display: none;*/
+}
+
+
+/* about */
+/* ----------- */
+.about {
+	height: 100vh;
+	width: 100wv;
+}
+.about-text {
+	margin-top: 150px;
+	/*background-color: #ffffff;*/
+	background-color: rgba(255, 255, 255, .8);
+
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  	-webkit-border-radius: 12px;
+
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 12px;
+
+  	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  	border-radius: 12px;
+
+	border: 3px solid #FFFFFF;
+}
+
+.about-image{
+	width: 100vw;
+	height: 100vh;
+}
+
+/* about */
+/* -------- */
+.menu{
+	/*background-color: g;*/
+	height: 100vh;
+	width: 100vw;
+}
+.menu-text{
+	margin-top: 150px;
+
+	/*background-color: #ffffff;*/
+	background-color: rgba(255, 255, 255, .7);
+
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  	-webkit-border-radius: 12px;
+
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 12px;
+
+  	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  	border-radius: 12px;
+
+	border: 3px solid #FFFFFF;
+}
+
+.menu-text li {
+	height: 45px;
+}
+
