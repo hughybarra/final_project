@@ -13,9 +13,25 @@
 
 .logo {
 	position: fixed;
-	top: 0;
-	right: 0;
+	top: 10px;
+	right: 10px;
 	z-index: 2;
+
+
+	/*background-color: #ffffff;*/
+	background-color: rgba(215, 218, 222, .9);
+
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  	-webkit-border-radius: 12px;
+
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 12px;
+
+  	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  	border-radius: 12px;
+
+	border: 3px solid #FFFFFF;
 
 }
 
@@ -32,6 +48,21 @@ nav {
 	height: auto;
 	margin-left: 10px;
 	margin-top: 25px;
+
+	/*background-color: #ffffff;*/
+	background-color: rgba(215, 218, 222, .9);
+
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  	-webkit-border-radius: 12px;
+
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 12px;
+
+  	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  	border-radius: 12px;
+
+	border: 3px solid #FFFFFF;
 }
 
 nav ul li {
@@ -117,5 +148,48 @@ nav ul li {
 
 .menu-text li {
 	height: 45px;
+}
+
+
+/* location */
+/* ----------- */
+
+.location {
+	height: 100vh;
+	width: 100vw;
+}
+
+.inner-location-container{
+	margin-top: 10%;
+	/*background-color: green;*/
+}
+
+.inner-location-text {
+	margin-top: 300px;
+
+
+	/*background-color: #ffffff;*/
+	background-color: rgba(255, 255, 255, .7);
+
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  	-webkit-border-radius: 12px;
+
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 12px;
+
+  	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  	border-radius: 12px;
+
+	border: 3px solid #FFFFFF;
+
+}
+
+#map_canvas {
+	margin-top: 300px;
+	width: 100%;
+	height: 400px;
+	background-color: #CCC;
+	border: 20px solid white;
 }
 
