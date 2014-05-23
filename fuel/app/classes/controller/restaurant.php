@@ -1,12 +1,12 @@
 <?php
 
 /**
- *
+ * Controller is in charge of all restaurant assets and routing
  */
 class Controller_Restaurant extends Controller_Template
 {
 	/**
-	 *
+	 * setting reataurant to null on reset
 	 */
 	protected $restaurant = null;
 	/**
@@ -27,21 +27,6 @@ class Controller_Restaurant extends Controller_Template
 		{
 			$this->template->set_global('restaurant', $this->restaurant, false);
 		}
-
-		/*
-		I'm going to try somehting interesting here. This might be bad, i'm not really sure. It seemed
-		like a good idea at the time.
-
-		So the plan is to load in a view file. Set all of the variables. Once the variables have been put into place
-		i'm going to copy that file and paste it into the public css file for rendering. I'm sure there is a better way
-		but i could not figure out a better way to do it.
-		*/
-
-		// set restaurant
-
-
-
-
 	}
 
 	/*
@@ -65,6 +50,10 @@ class Controller_Restaurant extends Controller_Template
 		$this->template->body = View::forge("restaurant/{$this->restaurant->template}", []);
 
 	}
+
+	/*
+	* View list
+	*/
 
 	public function get_about()
 	{

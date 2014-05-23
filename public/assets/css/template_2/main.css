@@ -2,6 +2,47 @@
 /* Css
 Author Hugh Ybarra
 */
+
+/*
+███╗   ███╗███████╗███╗   ██╗██╗   ██╗███████╗    ██████╗  █████╗  ██████╗ ███████╗
+████╗ ████║██╔════╝████╗  ██║██║   ██║██╔════╝    ██╔══██╗██╔══██╗██╔════╝ ██╔════╝
+██╔████╔██║█████╗  ██╔██╗ ██║██║   ██║███████╗    ██████╔╝███████║██║  ███╗█████╗
+██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║╚════██║    ██╔═══╝ ██╔══██║██║   ██║██╔══╝
+██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝███████║    ██║     ██║  ██║╚██████╔╝███████╗
+╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+*/
+
+.menu-type-container{
+	/*background-color: white;*/
+		/*opacity:0.6;*/
+}
+.menu-item h4 {
+	color: #222222;
+	padding-top: 10px;
+	color: rgb(230, 238, 242);
+	font-size: 1.5em;
+}
+.menu-type-container h2 {
+	color: rgb(0, 0, 0);
+	font-size: 3em;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.menu-item p {
+	padding-top: 10px;
+	color: rgb(230, 238, 242);
+	line-height: 20px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.menu-item{
+	margin-top: 15px;
+	background: rgba(34, 34, 34, 0.9);
+	height: auto;
+}
+
+
 .bg-image{
 	  position: fixed;
 }
@@ -81,7 +122,6 @@ nav ul li {
 	border-bottom: 3px solid #FFFFFF;
 }
 
-
 /* about */
 /* ----------- */
 .about {
@@ -91,9 +131,7 @@ nav ul li {
 }
 .about-text {
 	margin-top: 150px;
-	/*background-color: #ffffff;*/
 	background-color: rgba(255, 255, 255, .9);
-
 
 	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
   	-webkit-border-radius: 12px;
@@ -116,7 +154,6 @@ nav ul li {
 /* Menu */
 /* -------- */
 .menu{
-	/*background-color: g;*/
 	height: 100vh;
 	width: 100vw;
 	min-height: 800px;
@@ -125,9 +162,7 @@ nav ul li {
 .menu-text{
 	margin-top: 150px;
 
-	/*background-color: #ffffff;*/
 	background-color: rgba(255, 255, 255, .9);
-
 
 	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
   	-webkit-border-radius: 12px;
@@ -144,7 +179,6 @@ nav ul li {
 .menu-text li {
 	height: 45px;
 }
-
 
 /* location */
 /* ----------- */
@@ -163,10 +197,8 @@ nav ul li {
 .inner-location-text {
 	margin-top: 300px;
 
-
 	/*background-color: #ffffff;*/
 	background-color: rgba(255, 255, 255, .9);
-
 
 	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
   	-webkit-border-radius: 12px;
@@ -178,13 +210,13 @@ nav ul li {
   	border-radius: 12px;
 
 	border: 3px solid #FFFFFF;
-
 }
 
 #map_canvas {
 	margin-top: 300px;
 	width: 100%;
 	height: 400px;
+
 	background-color: #CCC;
 	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
   	-webkit-border-radius: 12px;
@@ -200,28 +232,20 @@ nav ul li {
 /* Extra small devies ( cell phones and what now ) */
 @media all and (max-width: 768px ){
 	.about{
-		/*height: 300px;*/
 		height: auto;
 		min-height: 0px;
-		/*background-color: blue;*/
 	}
 	.menu{
 		margin-top: 50px;
 		height: auto;
-		/*margin-top: 100px;*/
-		/*height: auto;*/
 		min-height: 400px;
-
-		/*background-color: white;*/
 	}
 	.location{
 		margin-top: 50px;
 		min-height: 0px;
-		/*background-color: #B4CCCF;*/
 		height: auto;
 	}
 	.logo {
-		/*min-height: 400px;*/
 		position: absolute;
 	}
 	.home {
@@ -246,7 +270,6 @@ nav ul li {
 	}
 	.menu-text {
 		margin-top: 0px;
-		/*background-color: green;*/
 		height: 400px;
 	}
 	.inner-location-text{
@@ -254,7 +277,6 @@ nav ul li {
 	}
 	.inner-location-container{
 		margin-top: 0px;
-	/*background-color: green;*/
 	}
 	.location-text {
 		margin-top: 0px;
@@ -263,7 +285,6 @@ nav ul li {
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
-
 
 }/* End xs media query */
 
@@ -274,7 +295,6 @@ nav ul li {
 		left: -150px;
 	}
 }/* End small media Query */
-
 
 /* Medium devices (desktops, 992px and up) */
 @media all and (min-width: 921px) and ( max-width: 1199px){

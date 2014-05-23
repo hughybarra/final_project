@@ -1,5 +1,8 @@
 <?php
 
+/*
+*Model Page data is in control of all page data
+*/
 class Model_Pagedata extends Orm\Model
 {
 	protected static $_properties = array(
@@ -22,10 +25,11 @@ class Model_Pagedata extends Orm\Model
 	    ),
     );
 
-
+    /*
+    * grabs page data by restaurant type and id
+    */
     public static function get_pageData_by_restaurant(Model_Restaurant $restaurant, $type)
 	{
-
 		return static::query()
 			->where('restaurant_id', $restaurant->id)
 			->where('type', $type)

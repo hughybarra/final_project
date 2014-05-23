@@ -1,5 +1,8 @@
 <?php
 
+/*
+* Model Location is in charge of all location assets
+*/
 class Model_Location extends Orm\Model
 {
 	protected static $_properties = array(
@@ -28,10 +31,8 @@ class Model_Location extends Orm\Model
 	);
 
 	/**
-	 *
+	 * Grabs the location data of restaurant by given id
 	 */
-	// this was not working for some reason.
-	// public static function get_by_restaurant(Model_Resturant $restaurant)
 	public static function get_location_by_restaurant(Model_Restaurant $restaurant)
 	{
 		return static::query()->where('restaurant_id', $restaurant->id)->get_one();

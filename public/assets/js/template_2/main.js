@@ -29,6 +29,7 @@ $(function() {
 	var bg1 	= $('.bg-image-1');
 	var bg2	 	= $('.bg-image-2');
 
+	// Check scoll location for image swapping
 	$(window).scroll(function(){
 
 		/*
@@ -60,18 +61,14 @@ $(function() {
 		}
 
 		else if (currentPosition >= menuPosition && currentPosition < locationPosition){
-
+			// unused for template two
 		}
 
 		else if (currentPosition >= locationPosition){
-
-
+			// unused in template two
 		}
 		// <-- end conditiaonal
-
-
-
-	})
+	});
 	//<!-- end nav bar
 
 		/*
@@ -104,8 +101,6 @@ $(function() {
 		// when clicked have the page animate to the above pixle position
 		jQuery('html, body').animate({scrollTop:elementPosition}, 'slow');
 
-		// window.location.href = '#home';
-
 		// prevent default link behavior
 		event.preventDefault
 		return false;
@@ -113,12 +108,9 @@ $(function() {
 
 	// about
 	$('.about-button').click(function(event){
-		// console.log('about-button clicked');
 		elementPosition= $('#about').offset().top;
 
 		jQuery('html, body').animate({scrollTop:elementPosition}, 'slow');
-
-		// window.location.href = '#about';
 
 		event.preventDefault
 		return false;
@@ -126,12 +118,9 @@ $(function() {
 
 	// menu
 	$('.menu-button').click(function(event){
-		// console.log('menu-button clicked');
 		elementPosition = $('#menu').offset().top;
 
 		jQuery('html, body').animate({scrollTop: elementPosition}, 'slow');
-
-		// window.location.href = '#menu';
 
 		event.preventDefault
 		return false;
@@ -139,7 +128,6 @@ $(function() {
 
 	//location
 	$('.location-button').click(function(event){
-		// console.log('location-button clicked');
 
 		elementPosition = $('#location').offset().top;
 

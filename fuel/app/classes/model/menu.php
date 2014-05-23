@@ -11,16 +11,6 @@ class Model_Menu extends Orm\Model
 		// 'updated_at',
 	);
 
-	// protected static $_belongs_to = array(
-	// 	'restaurant' => array(
-	// 		'key_from'       => 'restaurant_id',
-	// 		'model_to'       => 'Model_Restaurant',
-	// 		'key_to'         => 'id',
-	// 		'cascade_save'   => true,
-	// 		'cascade_delete' => false,
-	// 	)
-	// );
-
     protected static $_observers = array(
 	    'Orm\Observer_CreatedAt' => array(
 	            'events' => array('before_insert'),
@@ -32,10 +22,8 @@ class Model_Menu extends Orm\Model
 	    ),
     );
 
-
-
     /*
-	 *
+	 *grabs menu types data by restaurant id
 	 */
 	public static function get_menu_types_by_restaurant(Model_Restaurant $restaurant)
 	{
@@ -44,7 +32,7 @@ class Model_Menu extends Orm\Model
 	}
 
     /*
-     * public
+     * grabs menu data by type
      */
     public static function get_menu_by_restaurant(Model_Restaurant $restaurant, $type)
 	{
@@ -53,6 +41,4 @@ class Model_Menu extends Orm\Model
 						where('type', $type)->
 						get_one();
 	}
-
-
 }

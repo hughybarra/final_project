@@ -24,19 +24,13 @@ $(function() {
 	var viewportWidth = $(window).width();
 	var viewportHeight = $(window).height();
 
-
 	// set container divs to thee vieport height
 	$('.home').height(viewportHeight);
-
-	// $('.about').height(viewportHeight);
-
-	// $('.menu').height(viewportHeight);
 
 	$('.location').height(viewportHeight);
 	// grab image containers and give them widths
 	$('.about-container-1').addClass('col-lg-5 col-sm-6 col-lg-offset-1');
 	$('.about-container-2').addClass('col-lg-5 col-sm-6');
-
 
 	// Markdown does not have proper wrapper
 	// wrap the text in a wrapper
@@ -124,9 +118,6 @@ $(function() {
 	})
 	//<!-- end nav bar
 
-
-
-
 	/*
 	███╗   ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗
 	████╗  ██║██╔══██╗██║   ██║██╔══██╗██╔══██╗██╔══██╗
@@ -194,15 +185,5 @@ $(function() {
 		return false;
 	});// end location click
 	// <----- END SCROLLING CLICK FUNCTION
-
-
-	/* Phone Call */
-	$('.phone-contact').click(function(){
-		//console.log('phone call');
-		//var phoneNumber = $('.phone-digits').text();
-		//console.log(phoneNumber);
-		//window.location.href="tel://"+phoneNumber;
-	});//End phone call click function
-	// <------ END PHONE CALL FUNCTION
 
 });

@@ -17,9 +17,6 @@
 <!-- end background imges -->
 
 
-
-
-
 <nav class="my-nav">
 	<ul class="nav-ul">
 		<li class="home-button"><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
@@ -28,9 +25,6 @@
 		<li class="location-button"><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
 	</ul>
 </nav><!-- end navigation -->
-
-
-
 
 <div class="logo">
 
@@ -43,8 +37,6 @@
 																						 col-xs-6 col-xs-offset-2")) ?>
 </div>
 
-
-
 <section class="home col-lg-12
 					 col-md-12
 					 col-sm-12
@@ -54,8 +46,6 @@
 
 
 </section><!-- end home -->
-
-
 
 <section class="about col-lg-12
 					  col-md-12
@@ -76,14 +66,6 @@
 	</div>
 
 </section><!-- end about page -->
-
-
-
-
-
-
-
-
 
 <section class="menu col-xs-12" id="menu">
 
@@ -112,15 +94,6 @@
 
 
 </section><!-- end menu section -->
-
-
-
-
-
-
-
-
-
 
 <section class="location col-lg-12 col-xs-12" id="location">
 
@@ -155,9 +128,6 @@
 	</div>
 
 </section><!-- end location section -->
-
-
-
 
 <!-- Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -324,5 +294,3 @@
 	google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <!-- end google maps init -->
-
-

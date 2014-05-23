@@ -1,5 +1,9 @@
 <?php
 
+/*
+* unfortunately social media was not implemented.
+*/
+
 class Model_SocialMedia extends Orm\Model
 {
 	protected static $_properties = array(
@@ -21,5 +25,4 @@ class Model_SocialMedia extends Orm\Model
                 'mysql_timestamp' => false,
         ),
     );
-
 }

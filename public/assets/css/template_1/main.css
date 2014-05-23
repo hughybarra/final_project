@@ -21,7 +21,7 @@
 	font-size: 1.5em;
 }
 .menu-type-container h2 {
-	color: rgb(230, 238, 242);
+	color: rgb(0, 0, 0);
 	font-size: 3em;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -87,6 +87,7 @@
 
 		/*background-color: white;*/
 		/*background-color: white;*/
+
 	}
 	nav {
 		display: hidden;
@@ -1012,23 +1013,3 @@
 }
 /* ====================== */
 /* end large media query */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

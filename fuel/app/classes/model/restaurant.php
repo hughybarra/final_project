@@ -14,18 +14,6 @@ class Model_Restaurant extends Orm\Model{
 		'updated_at'
 	);
 
-	// protected static $_has_many = array('menus');
-
-	// protected static $_has_many = array(
-	// 	'menus' => array(
-	// 		'key_from'       => 'id',
-	// 		'model_to'       => 'Model_Menu',
-	// 		'key_to'         => 'restaurant_id',
-	// 		'cascade_save'   => true,
-	// 		'cascade_delete' => false,
-	// 	)
-	// );
-
 	protected static $_observers = array(
 		'Orm\Observer_created_at' => array(
 			'events'=> array('before_insert'),
@@ -46,7 +34,7 @@ class Model_Restaurant extends Orm\Model{
 	}
 
 	/**
-	 *
+	 * passes model restaurantto menu model to grab menu type data
 	 */
 	public function get_menus()
 	{
@@ -55,7 +43,7 @@ class Model_Restaurant extends Orm\Model{
 	}
 
 	/**
-	 *
+	 * Passes model restaurant to menu modelto grab menu data
 	 */
 	public function get_menu($type)
 	{
@@ -95,7 +83,7 @@ class Model_Restaurant extends Orm\Model{
 	//======================================
 
 	/**
-	*
+	* grabs restaurant template to be used
 	*/
 	public static function get_template(){
 		return static::query()->select('template')->where('restaurant_id', $restaurant->id)->get_one();

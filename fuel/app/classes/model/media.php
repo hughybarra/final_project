@@ -1,5 +1,8 @@
 <?php
 
+/*
+* Media Model. Model holds all image media types for webloading
+*/
 class Model_Media extends Orm\Model
 {
 

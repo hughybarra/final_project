@@ -6,7 +6,7 @@
 class Controller_Menu extends Controller_Template
 {
 	/**
-	 *
+	 * setting reastaurant to null on every reset
 	 */
 	protected $restaurant = null;
 	/**
