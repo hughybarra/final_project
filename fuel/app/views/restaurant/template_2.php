@@ -5,26 +5,20 @@
 
 	<div class="image-1 bg-image">
 		<?= Asset::img($restaurant->get_media('background.jpg')->path, array('alt'=>$restaurant->get_media('background.jpg')->alt,
-														'class' => "img-responsive"
+														'class' => "img-responsie bg-image-1"
+														))?>
+
+	<?= Asset::img($restaurant->get_media('6.jpg')->path, array('alt'=>$restaurant->get_media('6.jpg')->alt,
+														'class' => "img-responsie bg-image-2"
 														))?>
 	</div>
-
-
-<!--
-	<div class="image-3 bg-image">
-		<?= Asset::img($restaurant->get_media('6.jpg')->path, array('alt'=>$restaurant->get_media('6.jpg')->alt,
-														'class' => "img-responsive"
-														))?>
-	</div>
-
-	<div class="image-4 bg-image">
-		<?= Asset::img($restaurant->get_media('7.jpg')->path, array('alt'=>$restaurant->get_media('7.jpg')->alt,
-														'class' => "img-responsive"
-														))?>
-	</div> -->
 
 </div>
 <!-- end background imges -->
+
+
+
+
 
 <nav class="my-nav">
 	<ul class="nav-ul">
@@ -37,22 +31,35 @@
 
 
 
-<section class="home col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left" id="home">
+
+<div class="logo">
 
 
-	<div class="logo">
+	<?= Asset::img($restaurant->get_media('logo.png')->path, array("alt" => $restaurant->get_media('logo.png')->alt,
+															'class' => "
+																		image-responsive col-lg-8
+																						 col-md-6
+																						 col-sm-6
+																						 col-xs-6 col-xs-offset-2")) ?>
+</div>
 
 
-		<?= Asset::img($restaurant->get_media('logo.png')->path, array("alt" => $restaurant->get_media('logo.png')->alt,
-																'class' => "
-																			image-responsive")) ?>
-	</div>
+
+<section class="home col-lg-12
+					 col-md-12
+					 col-sm-12
+					 col-xs-12 pull-left" id="home">
+
+
+
 
 </section><!-- end home -->
 
 
 
-<section class="about col-lg-12 pull-left" id="about" id="about">
+<section class="about col-lg-12
+					  col-md-12
+					  col-sm-12 pull-left" id="about">
 
 	<div class="div-image pull-left">
 
@@ -60,7 +67,9 @@
 														'class' => "img-responsive about-image"
 														))?>
 	</div>
-	<div class="col-lg-6 col-lg-offset-1 about-text">
+	<div class="col-lg-6 col-lg-offset-1
+				col-md-5 col-md-offset-2
+				col-sm-8 col-sm-offset-2 about-text text-left">
 
 		<?= $restaurant->get_pageData('about') ?>
 
@@ -76,12 +85,18 @@
 
 
 
-<section class="menu col-lg-12 pull-left" id="menu">
+<section class="menu col-xs-12" id="menu">
 
-	<div class="menu-text col-lg-6 col-lg-offset-1">
+
+	<div class="menu-text col-lg-6 col-lg-offset-1
+						  col-md-5 col-md-offset-2
+						  col-sm-5 col-sm-offset-2
+						  col-xs-12
+						  text-center">
+
 		<h3 class="">Our Menus</h3>
 
-		<ul class="menu-items col-xs-7 col-lg-7 pull-left" >
+		<ul class="" >
 
 			<?php foreach($restaurant->get_menus() as $menu): ?>
 
@@ -92,6 +107,7 @@
 			<?php endforeach; ?>
 
 		</ul><!-- end menu items -->
+
 	</div><!-- end menu text -->
 
 
@@ -106,7 +122,7 @@
 
 
 
-<section class="location pull-left col-lg-12" id="location">
+<section class="location col-lg-12 col-xs-12" id="location">
 
 
 	<div class="div-image pull-left">
@@ -116,17 +132,23 @@
 														))?>
 	</div>
 
-	<div class="location-text row col-lg-12 col-lg-offset-1">
+	<div class="location-text row col-lg-12 col-lg-offset-">
 
-		<div class="inner-location-text col-lg-3 text-center">
+		<div class="inner-location-text col-lg-3 col-lg-offset-1
+										col-md-3 col-md-offset-1
+										col-sm-3 col-sm-offset-1
+										col-xs-12 text-center">
 			<h3>Location</h3>
 			<p><?= $restaurant->get_location()->full_address ?></p>
 			<?= $restaurant->get_pageData('hours') ?>
 		</div>
 
-		<div class="location-map-container  col-xs-12 col-lg-8">
+		<div class="location-map-container  col-lg-7
+											col-md-7
+											col-sm-7
+											col-xs-12">
 
-			<div id="map_canvas" class="col-xs-offset-1"></div>
+			<div id="map_canvas" class=""></div>
 
 		</div>
 
