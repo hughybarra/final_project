@@ -29,15 +29,6 @@ class Controller_Restaurant extends Controller_Template
 		}
 	}
 
-	/*
-	*Delete this when done
-	*/
-	public function get_test()
-	{
-		// echo 'this is running';
-		$this->template->body = View::forge("restaurant/trash", []);
-	}
-
 	/**
 	 * Routing Get Pages
 	 */

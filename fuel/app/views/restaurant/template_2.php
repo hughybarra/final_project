@@ -23,8 +23,11 @@
 		<li class="about-button"><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
 		<li class="menu-button"><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
 		<li class="location-button"><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
+		<!-- Template toggle button -->
+		<li class="layoutToggle"><p> TOGGLE</p></li>
 	</ul>
 </nav><!-- end navigation -->
+
 
 <div class="logo">
 

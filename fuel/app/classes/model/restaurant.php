@@ -14,16 +14,17 @@ class Model_Restaurant extends Orm\Model{
 		'updated_at'
 	);
 
-	protected static $_observers = array(
-		'Orm\Observer_created_at' => array(
-			'events'=> array('before_insert'),
-			'mysql_timestamp' => true,
-		),
-		'Orm\Observer_updated_at' => array(
-			'events' => array('before_save'),
-			'mysql_timestamp' => true,
-		),
-	);
+	// protected static $_observers = array(
+	// 	'Orm\Observer_created_at' => array(
+	// 		'events'=> array('before_insert'),
+	// 		'mysql_timestamp' => true,
+	// 	),
+	// 	'Orm\Observer_updated_at' => array(
+	// 		'events' => array('before_save'),
+	// 		'mysql_timestamp' => true,
+	// 	),
+	// );
+
 
 	/**
 	* This function goes into the Media model and runs the get_media_by_restaurant function which
@@ -85,8 +86,16 @@ class Model_Restaurant extends Orm\Model{
 	/**
 	* grabs restaurant template to be used
 	*/
-	public static function get_template(){
-		return static::query()->select('template')->where('restaurant_id', $restaurant->id)->get_one();
+	public static function get_template($restaurant){
+		// return static::query()->select('template')->where('restaurant_id', $restaurant->id)->get_one();
+		return static::query()->find($restaurant->id);
+	}
+
+	/*
+	*
+	*/
+	public static function set_template(){
+
 	}
 
 }

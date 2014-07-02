@@ -5,6 +5,7 @@ $(function() {
 
 	this document is in charge of all of the page functionality.
 	*/
+
 	/*
 	███╗   ███╗ █████╗ ██████╗ ██╗  ██╗██████╗  ██████╗ ██╗    ██╗███╗   ██╗
 	████╗ ████║██╔══██╗██╔══██╗██║ ██╔╝██╔══██╗██╔═══██╗██║    ██║████╗  ██║
@@ -69,7 +70,7 @@ $(function() {
 	// grab the nav ul element
 	var navUl = $('.nav-ul');
 	var phoneText = $('.phone-text');
-	console.log(aboutPosition - aboutHeight/2);
+	// console.log(aboutPosition - aboutHeight/2);
 
 
 	$(window).scroll(function(){
@@ -181,9 +182,49 @@ $(function() {
 		elementPosition = $('#location').offset().top;
 
 		jQuery('html, body').animate({scrollTop: elementPosition}, 'slow');
-		event.preventDefault
+		event.preventDefault;
 		return false;
 	});// end location click
 	// <----- END SCROLLING CLICK FUNCTION
+
+	/*
+	██╗      █████╗ ██╗   ██╗ ██████╗ ██╗   ██╗████████╗
+	██║     ██╔══██╗╚██╗ ██╔╝██╔═══██╗██║   ██║╚══██╔══╝
+	██║     ███████║ ╚████╔╝ ██║   ██║██║   ██║   ██║
+	██║     ██╔══██║  ╚██╔╝  ██║   ██║██║   ██║   ██║
+	███████╗██║  ██║   ██║   ╚██████╔╝╚██████╔╝   ██║
+	╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝  ╚═════╝    ╚═╝
+	toggle the layout back and forth jquery ajax call
+	*/
+
+	$('.layoutToggle').click(function(e){
+		console.log('layout toggle clicked');
+
+		var sPageURL = window.location.search.substring(1);
+		var url = window.location.href+'/toggle';
+
+		console.log(url);
+
+
+
+		$.ajax({
+			type: "GET",
+			url: url,
+			// dataType: 'Json'
+			// data: data,
+			success: function(success){
+				// console.log(success);
+				// load the new page
+				location.reload( true );
+			},
+			// dataType: dataType
+		});
+
+
+
+
+		event.preventDefault;
+		return false;
+	});
 
 });

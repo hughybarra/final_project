@@ -13,12 +13,10 @@ return array(
 
 	//Restaurant Routing List
 	//--------------------------------
+	':url/toggle' => 'toggle/toggle_layout',
 
 	':url/menu/(:any)' => 'menu/view/$2',
-	':url/(:any)' => 'restaurant/$2',
-	':url'        => 'restaurant/view',
-
-
-
+	// ':url/(:any)' => 'restaurant/$2',
+	':url'        => 'restaurant/view'
 
 );

@@ -1,5 +1,15 @@
+/*
+layout toggle div
+*/
 
-
+.layoutToggle {
+	color: #000000;
+	cursor: pointer;
+	background: rgba(34, 34, 34, 0.9);
+}
+.layoutToggle:hover {
+  color: red;
+}
 
 /*
 ███╗   ███╗███████╗███╗   ██╗██╗   ██╗███████╗    ██████╗  █████╗  ██████╗ ███████╗

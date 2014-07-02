@@ -85,9 +85,12 @@
 				<h2>The Examples</h2>
 				<p>
 					I would like to explain what you will be looking at here. Below are two restaurants PizzaJohns and Dr.Donut. Right now
-					both restaurants have their asssets stored in the database. PizzaJohns will be rendering template one, and Dr. Donut will be
-					rednering template two. Right now I only have two templates to chose from but you can swap out both restaurants and change
-					templates.
+					both restaurants have their asssets stored in the database. Click on the one of the logos below to check out the templated
+					layout for that restaurant. Once you have had a peek look for the TOGGLE button located in the nav and click. This toggle will
+					ajax into the server and swap out the template and refresh the page showing you the second layout. Right now I only have two
+					templates for proof of concept, but any number could be created and implemented and the data for each site could be swapped in in a
+					matter of seconds.
+
 				</p>
 			</div>
 
@@ -97,7 +100,7 @@
 					<div class="col-lg-7 feature-text text-left ">
 						<h3 class="">Pizza Johns</h3>
 						<p class="lead">
-							Pizza Johns was the first restaurant I used. Feel Free to check out template one with PizzaJohns restaurant as the filler content.
+							Pizza Johns was the first restaurant I used. Feel Free to check out template one and two with PizzaJohns restaurant as the filler content.
 						</p>
 					</div>
 
@@ -111,7 +114,7 @@
 						<h3 class="">Dr Donut</h3>
 						<p class="lead">
 							Once I finished template 1 I needed a second restaurant to prove the concept. So I created Dr Donut. Have a look at Dr.Donut website.
-							This site is using Template two.
+							This site is using Template one and two.
 						</p>
 					</div>
 

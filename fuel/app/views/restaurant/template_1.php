@@ -1,11 +1,15 @@
 <nav class="my-nav">
+
 	<ul class="nav-ul">
 		<li class="home-button"><?=  Html::anchor('#home', 'Home', array('class' => 'home-button'))?></li>
 		<li class="about-button"><?=  Html::anchor('#about', 'About', array('class' => 'about-button'))?></li>
 		<li class="menu-button"><?=  Html::anchor('#menu', 'Menu', array('class' => 'menu-button'))?></li>
 		<li class="location-button"><?=  Html::anchor('#location', 'Location', array('class' => 'location-button'))?></li>
+		<!-- Template toggle button -->
+		<li class="layoutToggle"><p> TOGGLE</p></li>
 	</ul>
 </nav><!-- end navigation -->
+
 
 
 
@@ -15,7 +19,7 @@
 													'class' => ""
 													))?>
 </div>
-<section class="home col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left" id="home">
+<section class="home col-lg-6 col-md-12 col-sm-12 col-xs-12 pull-left" id="home">
 
 
 	<div class="logo

@@ -1,4 +1,5 @@
 $(function() {
+
 	/*
 		AUTHOR : Hugh Ybarra
 
@@ -20,10 +21,10 @@ $(function() {
 	var menuPosition 		= $('#menu').offset().top;
 	var locationPosition 	= $('#location').offset().top;
 
-	console.log(homePosition);
-	console.log(aboutPosition);
-	console.log(menuPosition+'menu position');
-	console.log(locationPosition);
+	// console.log(homePosition);
+	// console.log(aboutPosition);
+	// console.log(menuPosition+'menu position');
+	// console.log(locationPosition);
 
 
 	var bg1 	= $('.bg-image-1');
@@ -47,14 +48,14 @@ $(function() {
 
 
 		if (currentPosition < aboutPosition){
-			console.log('default image');
+			// console.log('default image');
 			bg1.show();
 			bg2.hide();
 
 		}
 
 		else if(currentPosition >= aboutPosition && currentPosition < menuPosition){
-			console.log('new image');
+			// console.log('new image');
 			bg1.hide();
 			bg2.show();
 
@@ -133,10 +134,42 @@ $(function() {
 
 		jQuery('html, body').animate({scrollTop: elementPosition}, 'slow');
 
-		window.location.href = '#location';
-
 		event.preventDefault
 		return false;
 	});// end location click
 	// <----- END SCROLLING CLICK FUNCTION
+
+	/*
+	██╗      █████╗ ██╗   ██╗ ██████╗ ██╗   ██╗████████╗
+	██║     ██╔══██╗╚██╗ ██╔╝██╔═══██╗██║   ██║╚══██╔══╝
+	██║     ███████║ ╚████╔╝ ██║   ██║██║   ██║   ██║
+	██║     ██╔══██║  ╚██╔╝  ██║   ██║██║   ██║   ██║
+	███████╗██║  ██║   ██║   ╚██████╔╝╚██████╔╝   ██║
+	╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝  ╚═════╝    ╚═╝
+	toggle the layout back and forth jquery ajax call
+	*/
+
+	$('.layoutToggle').click(function(e){
+		console.log('layout toggle clicked');
+
+		var sPageURL = window.location.search.substring(1);
+		var url = window.location.href+'/toggle';
+		console.log(url);
+
+		$.ajax({
+			type: "GET",
+			url: url,
+			// dataType: 'Json'
+			// data: data,
+			success: function(success){
+				// console.log(success);
+				// load the new page
+				location.reload( true );
+			},
+			// dataType: dataType
+		});
+
+		event.preventDefault;
+		return false;
+	});
 });
